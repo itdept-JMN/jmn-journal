@@ -1,0 +1,46 @@
+{
+  "year": 2026,
+  "volume": 1,
+  "issue": 1,
+  "month": "January-June",
+  "title": "Volume 1, Issue 1 (January–June 2026)",
+  "fullIssuePdf": "/articles/2026-v1-i1/full-issue.pdf",
+  "articles": [
+    {
+      "id": "article-01",
+      "type": "Original Article",
+      "title": "Clinical Outcomes and Risk Factor Analysis of Ocular Surface Disorders in Rural Eastern India: A Cross-Sectional Study",
+      "authors": ["Dr. Chandana Chakraborti", "Dr. Saujen Basu", "Dr. Matiur Rahaman"],
+      "pages": "1–9",
+      "pdfUrl": "/articles/2026-v1-i1/article-01.pdf",
+      "abstract": "Background: Ocular surface disorders represent a significant burden of preventable blindness in rural communities. Methods: A observational study was conducted at JMN Medical College and Hospital evaluating 350 patients presenting with ocular surface inflammation. Results: Corneal dystrophies and severe dry eye disease were strongly correlated with occupational dust exposure and lack of protective eye wear. Conclusion: Targeted educational campaigns and protective measures are crucial in lowering morbidity."
+    },
+    {
+      "id": "article-02",
+      "type": "Review Article",
+      "title": "Epidemiological Trends and Prevention Strategies for Non-Communicable Diseases in Sub-Himalayan Districts",
+      "authors": ["Dr. Sarmila Mallick", "Dr. Arpita Das", "Dr. Subhojit Roy"],
+      "pages": "10–18",
+      "pdfUrl": "/articles/2026-v1-i1/article-02.pdf",
+      "abstract": "Non-communicable diseases (NCDs) such as hypertension, type 2 diabetes mellitus, and cardiovascular conditions are escalating in rural and semi-urban populations. This comprehensive review synthesizes local health survey data across Nadia district to outline community-level interventions."
+    },
+    {
+      "id": "article-03",
+      "type": "Original Article",
+      "title": "Assessment of Pediatric Nutrition and Micronutrient Deficiencies in Primary Care Settings",
+      "authors": ["Prof. (Dr.) Partha Tripathi", "Dr. Suprasanna Bandyopadhyay"],
+      "pages": "19–26",
+      "pdfUrl": "/articles/2026-v1-i1/article-03.pdf",
+      "abstract": "Micronutrient deficiencies impair pediatric growth and cognitive development. This study measured iron, vitamin D, and zinc serum levels among 200 pediatric patients attending outpatient clinics, highlighting actionable supplementation protocols."
+    },
+    {
+      "id": "article-04",
+      "type": "Case Report",
+      "title": "Rare Presentation of Atypical Anatomical Variation in Renal Vasculature: A Cadaveric Dissection and Clinical Report",
+      "authors": ["Prof. (Dr.) Saif Omar", "Prof. (Dr.) Aditi Saha", "Ms. Namrata Chatterjee"],
+      "pages": "27–31",
+      "pdfUrl": "/articles/2026-v1-i1/article-04.pdf",
+      "abstract": "Anatomical variations of the renal artery and vein carry immense surgical significance during nephrectomies and transplant procedures. We present a rare cadaveric finding of an accessory renal artery originating directly from the abdominal aorta superior to the main branch."
+    }
+  ]
+}

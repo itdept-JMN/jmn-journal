@@ -1,0 +1,110 @@
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/600.css";
+@import "@fontsource/cormorant-garamond/700.css";
+
+@import "@fontsource/source-serif-4/400.css";
+@import "@fontsource/source-serif-4/600.css";
+@import "@fontsource/source-serif-4/700.css";
+
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+@import "tailwindcss";
+
+:root {
+  --bg-main: #FAF8F5;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  
+  --color-maroon: #4A0E17;
+  --color-maroon-dark: #350910;
+  --color-maroon-light: #6B1926;
+  
+  --color-gold: #C5A059;
+  --color-gold-light: #E5C378;
+  --color-gold-bg: #FBF7EE;
+
+  --color-paper: #FFFFFF;
+  --color-paper-subtle: #F4EFE6;
+  --color-border: #E2D9CC;
+
+  --font-masthead: 'Cormorant Garamond', Georgia, serif;
+  --font-headline: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4A0E17;
+}
+
+.font-masthead {
+  font-family: var(--font-masthead);
+}
+
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* World-class Editorial Glass & Card Styles */
+.editorial-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: var(--color-maroon);
+  box-shadow: 0 10px 30px -10px rgba(74, 14, 23, 0.08);
+  transform: translateY(-2px);
+}
+
+.gold-accent-border {
+  border-left: 3px solid var(--color-gold);
+}
+
+.maroon-accent-border {
+  border-left: 4px solid var(--color-maroon);
+}
+
+/* Subtle Shimmer for Badges */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.badge-gold {
+  background: linear-[#FBF7EE], #F4EFE6;
+  border: 1px solid var(--color-gold-light);
+  color: var(--color-maroon);
+}
+
+.badge-maroon {
+  background-color: var(--color-maroon);
+  color: #FFFFFF;
+}
