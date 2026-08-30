@@ -1,6 +1,10 @@
 @echo off
 TITLE JMN Journal of Medical Sciences - Development Server
 CLS
+
+:: Change directory to script location
+cd /d "%~dp0"
+
 ECHO =========================================================================
 ECHO           JMN Journal of Medical Sciences - Website Launcher             
 ECHO =========================================================================
@@ -13,7 +17,7 @@ ECHO.
 WHERE node >nul 2>nul
 IF %ERRORLEVEL% NEQ 0 (
     ECHO [ERROR] Node.js is not installed or not found in system PATH.
-    ECHO Please install Node.js (v18 or higher) from https://nodejs.org/
+    ECHO Please install Node.js v18 or higher from https://nodejs.org/
     PAUSE
     EXIT /B 1
 )
@@ -29,8 +33,8 @@ IF NOT EXIST "node_modules\" (
     )
 )
 
-:: Launch browser after 3 seconds in background
-START "" cmd /c "timeout /t 3 /nobreak >nul && start http://localhost:3000"
+:: Launch browser in background after server starts
+START "" cmd /c "timeout /t 4 /nobreak >nul && start http://localhost:3000"
 
 :: Start Next.js dev server
 ECHO [SUCCESS] Launching Next.js development server on http://localhost:3000...
