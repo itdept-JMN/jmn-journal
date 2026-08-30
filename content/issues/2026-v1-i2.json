@@ -1,0 +1,86 @@
+{
+  "year": 2026,
+  "volume": 1,
+  "issue": 2,
+  "month": "July 2026",
+  "title": "Volume 1, Issue 2 (July 2026)",
+  "fullIssuePdf": "/articles/2026-v1-i2/full-issue.pdf",
+  "coverPdf": "/articles/2026-v1-i2/cover-page.pdf",
+  "articles": [
+    {
+      "id": "article-01",
+      "type": "Original Article",
+      "title": "Impact of Early Management in Osteoarticular Infections in Infants and Neonates: A Two-Year Retrospective Study",
+      "authors": [
+        "Dr. Sayantan Makur"
+      ],
+      "pages": "1–5",
+      "pdfUrl": "/articles/2026-v1-i2/article-01.pdf",
+      "abstract": "Background: Osteoarticular infections in neonates and infants can cause irreversible joint damage, growth disturbance, and disability. Methods: Retrospective study of 40 eligible neonates and infants evaluating clinical characteristics, risk factors, causative organisms, treatment, and relationship between presentation delay and outcome. Results: Septic arthritis was the most common diagnosis (53%), followed by osteomyelitis (43%). The hip was the most frequent site (76.2%). Conclusion: Early recognition and definitive institutional treatment significantly reduce permanent joint damage and sequelae."
+    },
+    {
+      "id": "article-02",
+      "type": "Case Study / Case Report",
+      "title": "Emerging Clinical Significance of Ochrobactrum anthropi Septicemia in a Multimorbid ICU Patient: A Clinical Case Report",
+      "authors": [
+        "Dr. Govind Raj Behera",
+        "Dr. Mousumi Bhowmik"
+      ],
+      "pages": "6–9",
+      "pdfUrl": "/articles/2026-v1-i2/article-02.pdf",
+      "abstract": "Ochrobactrum anthropi is a rare opportunistic Gram-negative bacillus recognized as a cause of nosocomial infections in critically ill patients with indwelling catheters. We report persistent O. anthropi bacteraemia in a 63-year-old ICU patient. Removal of the central venous catheter resulted in sterile repeat blood cultures and complete resolution of fever, highlighting the importance of prompt source control."
+    },
+    {
+      "id": "article-03",
+      "type": "Original Article",
+      "title": "Geospatial Network Analysis of Maternal Healthcare Access and Travel Impedance in South 24 Parganas District, West Bengal",
+      "authors": [
+        "Dr. Shuvajit Roy",
+        "Dr. Rajesh Nandi",
+        "Dr. Anurag Mondal"
+      ],
+      "pages": "10–14",
+      "pdfUrl": "/articles/2026-v1-i2/article-03.pdf",
+      "abstract": "Background: Geographic disparities in access to emergency obstetric care contribute heavily to maternal mortality. Methodology: QGIS v3.36 network analysis was used to model travel time matrices from 8 population nodes to 5 referral health hubs in South 24 Parganas. Results: Travel impedance ranged from 19.55 minutes to 125.15 minutes, with remote deltaic sectors showing extreme transit times. Conclusion: Strategic placement of emergency obstetric care facilities is needed in remote sectors."
+    },
+    {
+      "id": "article-04",
+      "type": "Original Article",
+      "title": "Assessment of Stability of Fluoride Vials Over a Time Period",
+      "authors": [
+        "Dr. Namrata Chatterjee",
+        "Dr. Nibedita Sarma",
+        "Dr. Sibasish Sahoo",
+        "Dr. Arpita Das",
+        "Dr. Aninda Dhar"
+      ],
+      "pages": "15–17",
+      "pdfUrl": "/articles/2026-v1-i2/article-04.pdf",
+      "abstract": "Background: Grey-top sodium fluoride (NaF) vials are used for blood glucose estimation, but their stability over time requires evaluation. Methods: 12 retained blood glucose samples across 4 glucose levels were rerun at baseline, 24h, 48h, 72h, 7d, and 14d on a Vitros 4600 dry chemistry system. Results & Conclusion: Statistically significant difference observed at 24 hours onward (p<0.05). NaF vials are reliably stable up to 24 hours after sample collection."
+    },
+    {
+      "id": "article-05",
+      "type": "Case Study / Case Report",
+      "title": "Anomalous Malrotation of Intestine with Ileocecal Junction in the Left Iliac Fossa: A Cadaveric Case Report",
+      "authors": [
+        "Dr. Rajarshi Roy",
+        "Dr. Amitesh Bhowal"
+      ],
+      "pages": "18–20",
+      "pdfUrl": "/articles/2026-v1-i2/article-05.pdf",
+      "abstract": "Intestinal malrotation is a rare congenital anomaly resulting from abnormal rotation and fixation of the midgut. We report a unique case discovered during undergraduate cadaveric dissection where the caecum and ileocecal junction were located in the left iliac fossa with small intestinal loops on the right side of the abdomen."
+    },
+    {
+      "id": "article-06",
+      "type": "Original Article",
+      "title": "A Study on Consumer Awareness and Disposal Practice of E-waste and Their Determinants in Kolkata, West Bengal",
+      "authors": [
+        "Dr. Arpita Das",
+        "Dr. Bobby Paul"
+      ],
+      "pages": "21–26",
+      "pdfUrl": "/articles/2026-v1-i2/article-06.pdf",
+      "abstract": "Background: Consumer awareness and proper e-waste disposal are critical to minimizing environmental and public health hazards. Methods: Online survey of 439 adult residents of Kolkata. Results: Satisfactory awareness level was found in 79% of participants (associated with younger age, higher education, and professional employment). However, only 4.1% deposited e-waste at designated collection points."
+    }
+  ]
+}

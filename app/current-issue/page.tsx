@@ -1,15 +1,60 @@
-import ArticleCard from "@/components/ArticleCard";
-import issueData from "@/content/issues/2026-v1-i1.json";
-import { Download, Calendar, Layers, FileCheck } from "lucide-react";
+"use client";
 
-export default function CurrentIssuePage() {
+import { useSearchParams } from "next/navigation";
+import { useState, Suspense } from "react";
+import ArticleCard from "@/components/ArticleCard";
+import issue1Data from "@/content/issues/2025-v1-i1.json";
+import issue2Data from "@/content/issues/2026-v1-i2.json";
+import { Download, Calendar, Layers, FileCheck, BookOpen } from "lucide-react";
+
+function CurrentIssueContent() {
+  const searchParams = useSearchParams();
+  const requestedIssue = searchParams.get("issue");
+
+  // Default to Issue 2 (July 2026) unless requested otherwise
+  const [selectedIssueId, setSelectedIssueId] = useState<string>(
+    requestedIssue === "2025-v1-i1" ? "2025-v1-i1" : "2026-v1-i2"
+  );
+
+  const issueData = selectedIssueId === "2025-v1-i1" ? issue1Data : issue2Data;
+
   return (
     <div className="space-y-8">
-      {/* Title */}
+      {/* Issue Selector Tabs */}
+      <div className="flex flex-wrap items-center justify-between gap-4 bg-[#F5EFE6] border border-[#E8D5B5] p-3 rounded-xl shadow-xs">
+        <div className="flex items-center gap-2">
+          <BookOpen className="w-5 h-5 text-[#5B1E1E]" />
+          <span className="font-headline font-bold text-stone-900 text-sm">Select Published Issue:</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setSelectedIssueId("2026-v1-i2")}
+            className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors ${
+              selectedIssueId === "2026-v1-i2"
+                ? "bg-[#5B1E1E] text-white shadow-xs"
+                : "bg-[#FDFBF8] text-stone-700 hover:text-[#5B1E1E] border border-[#E8D5B5]"
+            }`}
+          >
+            Vol. 1 No. 2 (July 2026) — Latest
+          </button>
+          <button
+            onClick={() => setSelectedIssueId("2025-v1-i1")}
+            className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors ${
+              selectedIssueId === "2025-v1-i1"
+                ? "bg-[#5B1E1E] text-white shadow-xs"
+                : "bg-[#FDFBF8] text-stone-700 hover:text-[#5B1E1E] border border-[#E8D5B5]"
+            }`}
+          >
+            Vol. 1 No. 1 (Dec 2025) — Inaugural
+          </button>
+        </div>
+      </div>
+
+      {/* Header */}
       <div className="border-b border-[#E8D5B5] pb-4">
         <div className="flex flex-wrap items-center gap-2 mb-2">
           <span className="text-xs font-bold text-[#5B1E1E] uppercase tracking-wider bg-[#F5EFE6] px-3 py-1 rounded-full">
-            Latest Publication
+            {selectedIssueId === "2026-v1-i2" ? "Current Issue" : "Inaugural Issue"}
           </span>
           <span className="text-xs font-semibold text-[#B8860B] bg-[#FDFBF8] border border-[#E8D5B5] px-3 py-1 rounded-full flex items-center gap-1">
             <Calendar className="w-3.5 h-3.5" />
@@ -18,7 +63,7 @@ export default function CurrentIssuePage() {
         </div>
 
         <h1 className="font-masthead text-3xl sm:text-4xl font-bold text-[#5B1E1E]">
-          Current Issue: Volume {issueData.volume}, Issue {issueData.issue}
+          Volume {issueData.volume}, Issue {issueData.issue}
         </h1>
         <p className="font-headline text-stone-600 text-sm sm:text-base mt-1">
           Table of Contents for JMN Journal of Medical Sciences — {issueData.month} {issueData.year}
@@ -36,20 +81,32 @@ export default function CurrentIssuePage() {
               Download Complete Combined Issue PDF
             </h2>
             <p className="text-xs text-stone-600">
-              Includes front matter, editorial note, table of contents, and all published articles in a single file
+              Includes front cover, editorial notes, table of contents, and all published articles in a single file
             </p>
           </div>
         </div>
 
-        <a
-          href={issueData.fullIssuePdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold shadow-xs transition-colors"
-        >
-          <Download className="w-4 h-4 text-[#E8D5B5]" />
-          Download Full Issue (PDF)
-        </a>
+        <div className="flex items-center gap-2">
+          {issueData.coverPdf && (
+            <a
+              href={issueData.coverPdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-[#FDFBF8] text-stone-800 hover:text-[#5B1E1E] border border-[#E8D5B5] px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-colors"
+            >
+              Cover PDF
+            </a>
+          )}
+          <a
+            href={issueData.fullIssuePdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold shadow-xs transition-colors"
+          >
+            <Download className="w-4 h-4 text-[#E8D5B5]" />
+            Download Full Issue PDF
+          </a>
+        </div>
       </div>
 
       {/* Articles List Header */}
@@ -74,3 +131,12 @@ export default function CurrentIssuePage() {
     </div>
   );
 }
+
+export default function CurrentIssuePage() {
+  return (
+    <Suspense fallback={<div className="p-8 text-center text-stone-600 font-headline">Loading issue contents...</div>}>
+      <CurrentIssueContent />
+    </Suspense>
+  );
+}
+

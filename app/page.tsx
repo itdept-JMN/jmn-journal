@@ -1,6 +1,6 @@
 import JournalParticulars from "@/components/JournalParticulars";
 import ArticleCard from "@/components/ArticleCard";
-import issueData from "@/content/issues/2026-v1-i1.json";
+import issueData from "@/content/issues/2026-v1-i2.json";
 import Link from "next/link";
 import { BookOpen, CheckCircle, ArrowRight, Shield, Award, Users } from "lucide-react";
 
@@ -26,7 +26,7 @@ export default function HomePage() {
               href="/current-issue"
               className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm transition-colors"
             >
-              Browse Current Issue (Vol 1, Issue 1)
+              Browse Current Issue (Vol 1, Issue 2)
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link

@@ -3,6 +3,15 @@ import { Download, FileText, FileCode, ShieldAlert } from "lucide-react";
 export default function DownloadsPage() {
   const downloads = [
     {
+      title: "JMN Journal Information & Profile",
+      description: "Official background, mission, aim, scope, target audience, and specialty coverage document for JMN Journal of Medical Sciences.",
+      filename: "about-journal-profile.pdf",
+      url: "/downloads/about-journal-profile.pdf",
+      format: "PDF Document",
+      size: "1.9 MB",
+      icon: FileText,
+    },
+    {
       title: "Copyright & Contributor Transfer Form",
       description: "Mandatory form requiring signatures of all co-authors transferring publishing copyright to JMN Education and Research Foundation upon acceptance.",
       filename: "copyright-transfer-form.pdf",

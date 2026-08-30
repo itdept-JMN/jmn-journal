@@ -1,5 +1,6 @@
 import Link from "next/link";
-import issueData from "@/content/issues/2026-v1-i1.json";
+import issue1Data from "@/content/issues/2025-v1-i1.json";
+import issue2Data from "@/content/issues/2026-v1-i2.json";
 import { FolderArchive, Calendar, BookOpen, ArrowRight, Download } from "lucide-react";
 
 export default function ArchivesPage() {
@@ -11,12 +12,34 @@ export default function ArchivesPage() {
           volumeNumber: 1,
           issues: [
             {
+              issueNumber: 2,
+              month: "July 2026",
+              title: issue2Data.title,
+              articleCount: issue2Data.articles.length,
+              fullIssuePdf: issue2Data.fullIssuePdf,
+              coverPdf: issue2Data.coverPdf,
+              href: "/current-issue?issue=2026-v1-i2",
+              isLatest: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      year: 2025,
+      volumes: [
+        {
+          volumeNumber: 1,
+          issues: [
+            {
               issueNumber: 1,
-              month: "January–June 2026",
-              title: issueData.title,
-              articleCount: issueData.articles.length,
-              fullIssuePdf: issueData.fullIssuePdf,
-              href: "/current-issue",
+              month: "December 2025",
+              title: issue1Data.title,
+              articleCount: issue1Data.articles.length,
+              fullIssuePdf: issue1Data.fullIssuePdf,
+              coverPdf: issue1Data.coverPdf,
+              href: "/current-issue?issue=2025-v1-i1",
+              isLatest: false,
             },
           ],
         },
@@ -35,7 +58,7 @@ export default function ArchivesPage() {
           Journal Archives
         </h1>
         <p className="font-headline text-stone-600 text-sm sm:text-base mt-1">
-          Historical repository organized strictly Year → Volume → Issue
+          Historical repository organized strictly by Year → Volume → Issue
         </p>
       </div>
 
@@ -65,7 +88,14 @@ export default function ArchivesPage() {
                     >
                       <div className="space-y-2">
                         <div className="flex items-center justify-between text-xs text-stone-500">
-                          <span className="font-semibold text-[#5B1E1E]">Issue {iss.issueNumber}</span>
+                          <div className="flex items-center gap-2">
+                            <span className="font-semibold text-[#5B1E1E]">Issue {iss.issueNumber}</span>
+                            {iss.isLatest && (
+                              <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded-full">
+                                Latest Issue
+                              </span>
+                            )}
+                          </div>
                           <span className="flex items-center gap-1">
                             <Calendar className="w-3.5 h-3.5 text-[#B8860B]" />
                             {iss.month}
@@ -91,15 +121,27 @@ export default function ArchivesPage() {
                           <ArrowRight className="w-3 h-3" />
                         </Link>
 
-                        <a
-                          href={iss.fullIssuePdf}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-stone-700 hover:text-[#5B1E1E] bg-[#FDFBF8] border border-[#E8D5B5] px-2.5 py-1 rounded text-[11px] font-semibold"
-                        >
-                          <Download className="w-3 h-3 text-[#B8860B]" />
-                          Full Issue PDF
-                        </a>
+                        <div className="flex items-center gap-1.5">
+                          {iss.coverPdf && (
+                            <a
+                              href={iss.coverPdf}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-stone-700 hover:text-[#5B1E1E] bg-[#FDFBF8] border border-[#E8D5B5] px-2 py-1 rounded text-[11px] font-semibold"
+                            >
+                              Cover PDF
+                            </a>
+                          )}
+                          <a
+                            href={iss.fullIssuePdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-white bg-[#5B1E1E] hover:bg-[#431616] px-2.5 py-1 rounded text-[11px] font-semibold"
+                          >
+                            <Download className="w-3 h-3 text-[#E8D5B5]" />
+                            Full Issue PDF
+                          </a>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -112,3 +154,4 @@ export default function ArchivesPage() {
     </div>
   );
 }
+
