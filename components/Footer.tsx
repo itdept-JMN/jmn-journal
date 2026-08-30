@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, Building, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, Building, ShieldCheck, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -43,7 +43,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/current-issue" className="hover:text-white transition-colors">
-                  Current Issue (Vol 1, Issue 1)
+                  Current Issue (Vol 1, Issue 2)
                 </Link>
               </li>
               <li>
@@ -87,19 +87,23 @@ export default function Footer() {
           {/* Column 4: Contact & Institution Address */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#B8860B] border-b border-stone-800 pb-1">
-              Institutional Address
+              Publisher & Editorial Office
             </h4>
             <div className="text-xs text-stone-300 space-y-2 leading-snug">
               <div className="flex items-start gap-2">
                 <Building className="w-4 h-4 text-[#E8D5B5] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block font-medium">JMN Medical College and Hospital</strong>
+                  <strong className="text-white block font-medium">JMN Medical College</strong>
                   <span>Uttar Panchpota, P.O. & P.S. Chakdaha, Dist. Nadia, PIN-741222, West Bengal, India</span>
                 </div>
               </div>
               <div className="flex items-center gap-2 pt-1 border-t border-stone-800 text-stone-400">
                 <Mail className="w-3.5 h-3.5 text-[#E8D5B5] shrink-0" />
-                <span>journal@jmnmch.com</span>
+                <a href="mailto:journal@jmnmch.com" className="hover:text-white transition-colors">journal@jmnmch.com</a>
+              </div>
+              <div className="flex items-center gap-2 text-stone-400">
+                <Phone className="w-3.5 h-3.5 text-[#E8D5B5] shrink-0" />
+                <span>+91 7980415085</span>
               </div>
             </div>
           </div>
@@ -109,11 +113,11 @@ export default function Footer() {
         {/* Bibliographic ISSN Status Strip */}
         <div className="border-t border-stone-800 pt-6 pb-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <div className="flex flex-wrap items-center gap-4">
-            <span><strong>ISSN (Print):</strong> Pending Assignment</span>
+            <span><strong>ISSN Application Request ID:</strong> 77227 (Registered Aug 29, 2026)</span>
             <span className="hidden md:inline">·</span>
-            <span><strong>ISSN (Online):</strong> Pending Assignment</span>
+            <span><strong>ISSN (Online):</strong> Applied</span>
             <span className="hidden md:inline">·</span>
-            <span><strong>Frequency:</strong> Biannual</span>
+            <span><strong>Frequency:</strong> Biannual (2 issues / year)</span>
           </div>
           <div className="font-masthead italic text-stone-300 text-sm">
             "A Legacy of Learning"
@@ -122,7 +126,7 @@ export default function Footer() {
 
         {/* Bottom Copyright Strip */}
         <div className="border-t border-stone-800/60 pt-4 text-center text-[11px] text-stone-500">
-          © {new Date().getFullYear()} JMN Journal of Medical Sciences. Published by JMN Education and Research Foundation. All rights reserved. Open Access.
+          © {new Date().getFullYear()} JMN Journal of Medical Sciences. Published by JMN Medical College. All rights reserved. Open Access.
         </div>
       </div>
     </footer>

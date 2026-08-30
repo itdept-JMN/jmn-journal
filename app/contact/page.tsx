@@ -1,4 +1,4 @@
-import { Mail, MapPin, Building, User, Laptop, BookOpen } from "lucide-react";
+import { Mail, MapPin, Building, User, Laptop, BookOpen, Phone, ShieldCheck } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -12,89 +12,119 @@ export default function ContactPage() {
           Contact Us
         </h1>
         <p className="font-headline text-stone-600 text-sm sm:text-base mt-1">
-          Editorial office address, Editor contact details, and IT management support
+          Publisher & Editorial Office address, Owner details, and IT operations contact
         </p>
       </div>
 
-      {/* Primary Contact Card: Publisher */}
-      <div className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-6 sm:p-8 shadow-xs space-y-6">
-        <h2 className="font-headline text-2xl font-bold text-[#5B1E1E] flex items-center gap-2 border-b border-[#E8D5B5] pb-3">
-          <Building className="w-6 h-6 text-[#B8860B]" />
-          Publisher
-        </h2>
+      {/* ISSN Application Confirmation Notice */}
+      <div className="bg-[#F5EFE6] border border-[#E8D5B5] rounded-xl p-5 sm:p-6 shadow-xs flex flex-wrap items-center justify-between gap-4">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-[#5B1E1E]" />
+            <h2 className="font-headline text-base font-bold text-stone-900">
+              ISSN Application Record (National Science Library / NIScPR, New Delhi)
+            </h2>
+          </div>
+          <p className="text-xs text-stone-600">
+            Application Request ID: <strong>77227</strong> · Registered: <strong>Aug 29, 2026</strong> · Publication Format: <strong>Online</strong> · Frequency: <strong>Two issues per year</strong>
+          </p>
+        </div>
+        <a
+          href="https://journal.jmnmedicalcollege.org.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-bold text-[#5B1E1E] bg-[#FDFBF8] border border-[#E8D5B5] px-3 py-1.5 rounded-lg hover:bg-[#E8D5B5] transition-colors"
+        >
+          https://journal.jmnmedicalcollege.org.in/
+        </a>
+      </div>
 
-        <div className="space-y-3 bg-[#F5EFE6]/40 p-5 rounded-lg border border-[#E8D5B5]/60 max-w-xl">
-          <h3 className="font-bold text-stone-900 text-base">JMN Education and Research Foundation</h3>
-          <p className="text-xs text-stone-600">Registered public charitable trust; founding trust of JMN Medical College and Hospital</p>
-          <div className="space-y-2 text-xs sm:text-sm text-stone-700">
-            <div className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 text-[#5B1E1E] shrink-0 mt-0.5" />
-              <span>A-2/15, P.O. &amp; P.S. Kalyani, Dist. Nadia, PIN-741235, West Bengal, India</span>
+      {/* Primary Contact Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Publisher & Responsible Person */}
+        <div className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-6 shadow-xs space-y-4 flex flex-col justify-between">
+          <div>
+            <h2 className="font-headline text-xl font-bold text-[#5B1E1E] flex items-center gap-2 border-b border-[#E8D5B5] pb-3 mb-3">
+              <Building className="w-5 h-5 text-[#B8860B]" />
+              Issuing / Publishing Body & Owner
+            </h2>
+
+            <div className="space-y-2 text-xs sm:text-sm text-stone-700">
+              <div>
+                <span className="text-stone-500 font-medium text-xs block">Name of Issuing / Publishing Body:</span>
+                <strong className="text-stone-900 text-base font-bold">JMN Medical College</strong>
+              </div>
+              <div className="pt-2 border-t border-[#E8D5B5]/60">
+                <span className="text-stone-500 font-medium text-xs block">Owner / Responsible Person:</span>
+                <strong className="text-stone-900 font-semibold">Harsh Kumar Shaw</strong>
+                <p className="text-xs text-stone-600">IT Executive & Digital Repository Administrator</p>
+              </div>
+              <div className="flex items-start gap-2 pt-2 border-t border-[#E8D5B5]/60">
+                <MapPin className="w-4 h-4 text-[#5B1E1E] shrink-0 mt-0.5" />
+                <span>JMN Medical College, Uttar Panchpota, P.O & P.S. Chakdaha, Dist. Nadia, Pin: 741222, West Bengal, India</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 pt-2 border-t border-[#E8D5B5]/60">
+          </div>
+
+          <div className="space-y-1.5 pt-3 border-t border-[#E8D5B5]/60 text-xs">
+            <div className="flex items-center gap-2 text-stone-700">
               <Mail className="w-4 h-4 text-[#5B1E1E] shrink-0" />
               <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] font-semibold hover:underline">
                 journal@jmnmch.com
               </a>
             </div>
+            <div className="flex items-center gap-2 text-stone-700">
+              <Phone className="w-4 h-4 text-[#5B1E1E] shrink-0" />
+              <span className="font-semibold text-stone-800">+91 7980415085</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Primary Contact Card: Institution & Editorial Office */}
-      <div className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-6 sm:p-8 shadow-xs space-y-6">
-        <h2 className="font-headline text-2xl font-bold text-[#5B1E1E] flex items-center gap-2 border-b border-[#E8D5B5] pb-3">
-          <Building className="w-6 h-6 text-[#B8860B]" />
-          Institution & Editorial Office Address
-        </h2>
+        {/* Editor-in-Chief & Editorial Office */}
+        <div className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-6 shadow-xs space-y-4 flex flex-col justify-between">
+          <div>
+            <h2 className="font-headline text-xl font-bold text-[#5B1E1E] flex items-center gap-2 border-b border-[#E8D5B5] pb-3 mb-3">
+              <User className="w-5 h-5 text-[#B8860B]" />
+              Editor-in-Chief & Editorial Desk
+            </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-stone-800">
-          <div className="space-y-3 bg-[#F5EFE6]/40 p-5 rounded-lg border border-[#E8D5B5]/60">
-            <h3 className="font-bold text-stone-900 text-base">JMN Medical College and Hospital</h3>
             <div className="space-y-2 text-xs sm:text-sm text-stone-700">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#5B1E1E] shrink-0 mt-0.5" />
-                <span>Uttar Panchpota, P.O. & P.S. Chakdaha, Dist. Nadia, PIN-741222, West Bengal, India</span>
+              <div>
+                <strong className="text-stone-900 text-base font-bold block">Dr. Chandana Chakraborti</strong>
+                <p className="text-xs text-stone-600">MD (AIIMS), FAICO (Oculoplasty)</p>
+                <p className="text-xs text-stone-600 font-semibold">Professor & HOD, Department of Ophthalmology, JMN Medical College</p>
               </div>
-              <div className="flex items-center gap-2 pt-2 border-t border-[#E8D5B5]/60">
-                <Mail className="w-4 h-4 text-[#5B1E1E] shrink-0" />
-                <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] font-semibold hover:underline">
-                  journal@jmnmch.com
-                </a>
+              <div className="pt-2 border-t border-[#E8D5B5]/60">
+                <span className="text-stone-500 font-medium text-xs block">Editorial Office Address:</span>
+                <span>Department of Ophthalmology / Central Library, JMN Medical College, Uttar Panchpota, P.O. & P.S. Chakdaha, Dist. Nadia, PIN: 741222, West Bengal, India</span>
               </div>
             </div>
           </div>
 
-          <div className="space-y-3 bg-[#F5EFE6]/40 p-5 rounded-lg border border-[#E8D5B5]/60">
-            <h3 className="font-bold text-stone-900 text-base">Editor-in-Chief Contact</h3>
-            <div className="space-y-2 text-xs sm:text-sm text-stone-700">
-              <div className="flex items-start gap-2">
-                <User className="w-4 h-4 text-[#5B1E1E] shrink-0 mt-0.5" />
-                <div>
-                  <strong>Dr. Chandana Chakraborti</strong>
-                  <p className="text-xs text-stone-600">Professor & HOD, Department of Ophthalmology</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 pt-2 border-t border-[#E8D5B5]/60">
-                <Mail className="w-4 h-4 text-[#5B1E1E] shrink-0" />
-                <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] font-semibold hover:underline">
-                  journal@jmnmch.com
-                </a>
-              </div>
+          <div className="space-y-1.5 pt-3 border-t border-[#E8D5B5]/60 text-xs">
+            <div className="flex items-center gap-2 text-stone-700">
+              <Mail className="w-4 h-4 text-[#5B1E1E] shrink-0" />
+              <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] font-semibold hover:underline">
+                journal@jmnmch.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2 text-stone-700">
+              <Phone className="w-4 h-4 text-[#5B1E1E] shrink-0" />
+              <span className="font-semibold text-stone-800">+91 7980415085</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Journal Management Team (Separately Labelled) */}
+      {/* Journal Operations & Digital Administration Team */}
       <section className="bg-[#F5EFE6]/50 border border-[#E8D5B5] rounded-xl p-6 sm:p-8 space-y-4">
         <div>
           <h2 className="font-headline text-xl font-bold text-[#5B1E1E] flex items-center gap-2">
             <Laptop className="w-5 h-5 text-[#B8860B]" />
-            Journal Management & IT Operations Team
+            Digital Infrastructure & Operational Support
           </h2>
           <p className="text-xs text-stone-600 mt-1">
-            Note: The operational management team handles website infrastructure, library archiving, and technical support. They are excluded from the ISSN Editorial Board roster.
+            Note: The technical and library operations team manages site hosting, digital archiving, and indexing compliance.
           </p>
         </div>
 
@@ -105,13 +135,17 @@ export default function ContactPage() {
               <Laptop className="w-4 h-4 text-[#5B1E1E]" />
               <h3 className="font-bold text-stone-900 text-sm">Mr. Harsh Kumar Shaw</h3>
             </div>
-            <p className="text-xs font-semibold text-[#5B1E1E]">IT Executive, JMN Medical College and Hospital</p>
-            <p className="text-xs text-stone-600">Responsible for website architecture, digital repository management, and technical compliance.</p>
-            <div className="text-xs font-medium text-stone-700 pt-1 flex items-center gap-1">
-              <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
-              <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] hover:underline">
-                journal@jmnmch.com
-              </a>
+            <p className="text-xs font-semibold text-[#5B1E1E]">IT Executive, JMN Medical College (Owner / Responsible Person in ISSN App #77227)</p>
+            <p className="text-xs text-stone-600">Responsible for cloud deployment, domain management, and technical compliance.</p>
+            <div className="text-xs font-medium text-stone-700 pt-1 flex items-center justify-between">
+              <span className="flex items-center gap-1">
+                <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
+                <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] hover:underline">journal@jmnmch.com</a>
+              </span>
+              <span className="flex items-center gap-1 font-mono">
+                <Phone className="w-3.5 h-3.5 text-[#B8860B]" />
+                7980415085
+              </span>
             </div>
           </div>
 
@@ -121,13 +155,17 @@ export default function ContactPage() {
               <BookOpen className="w-4 h-4 text-[#5B1E1E]" />
               <h3 className="font-bold text-stone-900 text-sm">Ms. Debahuti Roy</h3>
             </div>
-            <p className="text-xs font-semibold text-[#5B1E1E]">Librarian, JMN Medical College and Hospital</p>
-            <p className="text-xs text-stone-600">Responsible for bibliographic archiving, indexation records, and physical/digital holdings.</p>
-            <div className="text-xs font-medium text-stone-700 pt-1 flex items-center gap-1">
-              <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
-              <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] hover:underline">
-                journal@jmnmch.com
-              </a>
+            <p className="text-xs font-semibold text-[#5B1E1E]">Librarian, JMN Medical College</p>
+            <p className="text-xs text-stone-600">Responsible for library submissions, physical holdings, and indexing records.</p>
+            <div className="text-xs font-medium text-stone-700 pt-1 flex items-center justify-between">
+              <span className="flex items-center gap-1">
+                <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
+                <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] hover:underline">journal@jmnmch.com</a>
+              </span>
+              <span className="flex items-center gap-1 font-mono">
+                <Phone className="w-3.5 h-3.5 text-[#B8860B]" />
+                7980415085
+              </span>
             </div>
           </div>
         </div>
