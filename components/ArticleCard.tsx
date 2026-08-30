@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { FileText, UserCheck, Calendar, BookOpen, Copy, Check, Quote, ScrollText } from "lucide-react";
 
 export interface IssueMeta {
@@ -62,6 +63,8 @@ export default function ArticleCard({
     setTimeout(() => setCopied(false), 2500);
   };
 
+  const articleSlug = (article as any).slug || `${year === 2026 ? "2026-v1-i2" : "2025-v1-i1"}-${article.id}`;
+
   return (
     <article className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-5 sm:p-6 shadow-xs hover:border-[#5B1E1E] transition-all space-y-4">
       {/* Header Badges */}
@@ -81,9 +84,11 @@ export default function ArticleCard({
         </span>
       </div>
 
-      {/* Article Title */}
+      {/* Article Title (Clickable link to single page) */}
       <h3 className="font-headline text-lg sm:text-xl font-bold text-stone-900 leading-snug hover:text-[#5B1E1E] transition-colors">
-        {article.title}
+        <Link href={`/article/${articleSlug}`}>
+          {article.title}
+        </Link>
       </h3>
 
       {/* Author List */}
@@ -164,17 +169,27 @@ export default function ArticleCard({
         </div>
       </div>
 
-      {/* Access & PDF Downloads */}
+      {/* Access & PDF Downloads & Single Page Link */}
       <div className="pt-2 border-t border-[#E8D5B5]/80 flex flex-wrap items-center justify-between gap-3">
-        <a
-          href={article.pdfUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-4 py-2.5 rounded-lg text-xs font-semibold shadow-xs transition-colors"
-        >
-          <FileText className="w-4 h-4" />
-          Download Article PDF
-        </a>
+        <div className="flex flex-wrap items-center gap-2">
+          <Link
+            href={`/article/${articleSlug}`}
+            className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-4 py-2.5 rounded-lg text-xs font-semibold shadow-xs transition-colors"
+          >
+            <BookOpen className="w-4 h-4 text-[#E8D5B5]" />
+            Read Full Article Page
+          </Link>
+
+          <a
+            href={article.pdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 bg-[#FDFBF8] text-[#5B1E1E] hover:bg-[#F5EFE6] border border-[#E8D5B5] px-3 py-2 rounded-lg text-xs font-semibold transition-colors"
+          >
+            <FileText className="w-3.5 h-3.5" />
+            PDF File
+          </a>
+        </div>
 
         {fullIssuePdf && (
           <a
