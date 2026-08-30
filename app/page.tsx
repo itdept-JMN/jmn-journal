@@ -189,6 +189,12 @@ export default function HomePage() {
             <ArticleCard
               key={art.id}
               article={art}
+              issueMeta={{
+                volume: issueData.volume,
+                issue: issueData.issue,
+                month: issueData.month,
+                year: issueData.year,
+              }}
             />
           ))}
         </div>

@@ -115,6 +115,12 @@ function CurrentIssueContent() {
           <ArticleCard
             key={article.id}
             article={article}
+            issueMeta={{
+              volume: issueData.volume,
+              issue: issueData.issue,
+              month: issueData.month,
+              year: issueData.year,
+            }}
           />
         ))}
       </div>
