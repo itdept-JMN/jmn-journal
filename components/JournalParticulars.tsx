@@ -5,12 +5,14 @@ export default function JournalParticulars() {
     { label: "ISSN (Online)", value: "Pending Assignment" },
     { label: "Frequency", value: "Biannual (2 Issues / Year)" },
     { label: "Language", value: "English" },
-    { label: "Starting Year", value: "2026" },
+    { label: "Starting Year", value: "2025" },
     { label: "Publication Format", value: "Print & Online (Open Access)" },
     { label: "Subject", value: "Medical Sciences" },
+    { label: "Publisher", value: "JMN Education and Research Foundation" },
+    { label: "Publisher Address", value: "A-2/15, P.O. & P.S. Kalyani, Dist. Nadia, PIN-741235, West Bengal, India" },
     { label: "Institution & Editorial Office", value: "JMN Medical College and Hospital, Uttar Panchpota, P.O. & P.S. Chakdaha, Dist. Nadia, PIN-741222, West Bengal, India" },
     { label: "Editor-in-Chief", value: "Dr. Chandana Chakraborti" },
-    { label: "Editorial Email", value: "editor@jmnmedicalcollege.org" },
+    { label: "Contact Email", value: "journal@jmnmch.com" },
   ];
 
   return (

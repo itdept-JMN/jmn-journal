@@ -16,6 +16,31 @@ export default function ContactPage() {
         </p>
       </div>
 
+      {/* Primary Contact Card: Publisher */}
+      <div className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-6 sm:p-8 shadow-xs space-y-6">
+        <h2 className="font-headline text-2xl font-bold text-[#5B1E1E] flex items-center gap-2 border-b border-[#E8D5B5] pb-3">
+          <Building className="w-6 h-6 text-[#B8860B]" />
+          Publisher
+        </h2>
+
+        <div className="space-y-3 bg-[#F5EFE6]/40 p-5 rounded-lg border border-[#E8D5B5]/60 max-w-xl">
+          <h3 className="font-bold text-stone-900 text-base">JMN Education and Research Foundation</h3>
+          <p className="text-xs text-stone-600">Registered public charitable trust; founding trust of JMN Medical College and Hospital</p>
+          <div className="space-y-2 text-xs sm:text-sm text-stone-700">
+            <div className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-[#5B1E1E] shrink-0 mt-0.5" />
+              <span>A-2/15, P.O. &amp; P.S. Kalyani, Dist. Nadia, PIN-741235, West Bengal, India</span>
+            </div>
+            <div className="flex items-center gap-2 pt-2 border-t border-[#E8D5B5]/60">
+              <Mail className="w-4 h-4 text-[#5B1E1E] shrink-0" />
+              <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] font-semibold hover:underline">
+                journal@jmnmch.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Primary Contact Card: Institution & Editorial Office */}
       <div className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-6 sm:p-8 shadow-xs space-y-6">
         <h2 className="font-headline text-2xl font-bold text-[#5B1E1E] flex items-center gap-2 border-b border-[#E8D5B5] pb-3">
@@ -33,8 +58,8 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center gap-2 pt-2 border-t border-[#E8D5B5]/60">
                 <Mail className="w-4 h-4 text-[#5B1E1E] shrink-0" />
-                <a href="mailto:editor@jmnmedicalcollege.org" className="text-[#5B1E1E] font-semibold hover:underline">
-                  editor@jmnmedicalcollege.org
+                <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] font-semibold hover:underline">
+                  journal@jmnmch.com
                 </a>
               </div>
             </div>
@@ -52,8 +77,8 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center gap-2 pt-2 border-t border-[#E8D5B5]/60">
                 <Mail className="w-4 h-4 text-[#5B1E1E] shrink-0" />
-                <a href="mailto:c.chakraborti@jmnmedicalcollege.org" className="text-[#5B1E1E] font-semibold hover:underline">
-                  c.chakraborti@jmnmedicalcollege.org
+                <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] font-semibold hover:underline">
+                  journal@jmnmch.com
                 </a>
               </div>
             </div>
@@ -84,8 +109,8 @@ export default function ContactPage() {
             <p className="text-xs text-stone-600">Responsible for website architecture, digital repository management, and technical compliance.</p>
             <div className="text-xs font-medium text-stone-700 pt-1 flex items-center gap-1">
               <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
-              <a href="mailto:h.shaw@jmnmedicalcollege.org" className="text-[#5B1E1E] hover:underline">
-                h.shaw@jmnmedicalcollege.org
+              <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] hover:underline">
+                journal@jmnmch.com
               </a>
             </div>
           </div>
@@ -100,8 +125,8 @@ export default function ContactPage() {
             <p className="text-xs text-stone-600">Responsible for bibliographic archiving, indexation records, and physical/digital holdings.</p>
             <div className="text-xs font-medium text-stone-700 pt-1 flex items-center gap-1">
               <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
-              <a href="mailto:d.roy@jmnmedicalcollege.org" className="text-[#5B1E1E] hover:underline">
-                d.roy@jmnmedicalcollege.org
+              <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] hover:underline">
+                journal@jmnmch.com
               </a>
             </div>
           </div>

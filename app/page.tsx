@@ -189,7 +189,6 @@ export default function HomePage() {
             <ArticleCard
               key={art.id}
               article={art}
-              fullIssuePdf={issueData.fullIssuePdf}
             />
           ))}
         </div>

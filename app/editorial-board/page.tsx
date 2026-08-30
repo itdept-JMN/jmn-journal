@@ -13,8 +13,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & HOD, Department of Ophthalmology",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "c.chakraborti@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/c-chakraborti",
       },
     ],
   },
@@ -27,8 +25,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & HOD, Department of Community Medicine",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "s.mallick@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/s-mallick",
       },
     ],
   },
@@ -41,8 +37,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & HOD, Department of Paediatrics",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "p.tripathi@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/p-tripathi",
       },
       {
         role: "Associate Editor",
@@ -50,8 +44,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & HOD, Department of Anatomy",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "s.omar@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/s-omar",
       },
       {
         role: "Associate Editor",
@@ -59,8 +51,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & HOD, Department of Biochemistry",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "a.saha@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/a-saha",
       },
     ],
   },
@@ -73,8 +63,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Assistant Professor, Department of Microbiology",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "s.bandyopadhyay@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/s-bandyopadhyay",
       },
       {
         role: "Assistant Editor",
@@ -82,8 +70,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Senior Resident (Faculty), Department of Biochemistry",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "n.chatterjee@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/n-chatterjee",
       },
     ],
   },
@@ -96,8 +82,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & HOD, Department of Physiology",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "s.basu@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/s-basu",
       },
       {
         role: "Member",
@@ -105,8 +89,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Assistant Professor, Department of Community Medicine",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "a.das@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/a-das",
       },
       {
         role: "Member",
@@ -114,8 +96,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Assistant Professor, Department of Community Medicine",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "s.roy@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/s-roy",
       },
       {
         role: "Member",
@@ -123,8 +103,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & HOD, Department of Pathology",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "b.choudhury@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/b-choudhury",
       },
       {
         role: "Member",
@@ -132,8 +110,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & HOD, Department of Pharmacology",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "m.rahaman@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/m-rahaman",
       },
     ],
   },
@@ -146,8 +122,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Professor & Director (Academic Affairs), Department of Physiology",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "a.neogi@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/a-neogi",
       },
       {
         role: "Advisor",
@@ -155,8 +129,6 @@ const ROSTER_GROUPS: { groupName: string; members: EditorialMember[] }[] = [
         designation: "Trustee, JMN Education and Research Foundation",
         institution: "JMN Medical College and Hospital",
         address: INSTITUTION_ADDRESS,
-        email: "trustee@jmnmedicalcollege.org",
-        profileUrl: "https://jmnmedicalcollege.org/faculty/s-singh-ghosh",
       },
     ],
   },
@@ -174,7 +146,7 @@ export default function EditorialBoardPage() {
           Editorial Board Roster
         </h1>
         <p className="font-headline text-stone-600 text-sm sm:text-base mt-1">
-          Complete, verified text listing of the 14 Editorial Board members governing JMN Journal of Medical Sciences
+          Text listing of the 14 Editorial Board members governing JMN Journal of Medical Sciences
         </p>
       </div>
 
@@ -182,8 +154,8 @@ export default function EditorialBoardPage() {
       <div className="bg-[#F5EFE6]/60 border border-[#E8D5B5] rounded-xl p-4 flex items-start gap-3 text-xs sm:text-sm text-stone-700">
         <Info className="w-5 h-5 text-[#5B1E1E] shrink-0 mt-0.5" />
         <div>
-          <strong className="text-stone-900 block font-semibold">ISSN India Verification Notice:</strong>
-          Every member below is listed in plain selectable text with institutional designation, operating department address, institutional email, and verified external institutional profile link.
+          <strong className="text-stone-900 block font-semibold">ISSN India Compliance Notice:</strong>
+          Every member below is listed in plain selectable text with institutional designation and department address. Institutional e-mail and institution-hosted profile links are being collected from each member and will be added here as they are confirmed &mdash; only real, verified values are published on this page.
         </div>
       </div>
 

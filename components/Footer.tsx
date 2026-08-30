@@ -99,7 +99,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 pt-1 border-t border-stone-800 text-stone-400">
                 <Mail className="w-3.5 h-3.5 text-[#E8D5B5] shrink-0" />
-                <span>editor@jmnmedicalcollege.org</span>
+                <span>journal@jmnmch.com</span>
               </div>
             </div>
           </div>

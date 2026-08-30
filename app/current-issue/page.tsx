@@ -5,7 +5,7 @@ import { useState, Suspense } from "react";
 import ArticleCard from "@/components/ArticleCard";
 import issue1Data from "@/content/issues/2025-v1-i1.json";
 import issue2Data from "@/content/issues/2026-v1-i2.json";
-import { Download, Calendar, Layers, FileCheck, BookOpen } from "lucide-react";
+import { Calendar, Layers, FileCheck, BookOpen } from "lucide-react";
 
 function CurrentIssueContent() {
   const searchParams = useSearchParams();
@@ -70,7 +70,7 @@ function CurrentIssueContent() {
         </p>
       </div>
 
-      {/* Full Issue Download Banner */}
+      {/* Cover PDF link */}
       <div className="bg-[#F5EFE6] border border-[#E8D5B5] rounded-xl p-5 sm:p-6 flex flex-wrap items-center justify-between gap-4 shadow-xs">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-lg bg-[#5B1E1E] text-white flex items-center justify-center font-bold">
@@ -78,10 +78,10 @@ function CurrentIssueContent() {
           </div>
           <div>
             <h2 className="font-headline text-lg font-bold text-stone-900">
-              Download Complete Combined Issue PDF
+              {issueData.title}
             </h2>
             <p className="text-xs text-stone-600">
-              Includes front cover, editorial notes, table of contents, and all published articles in a single file
+              Each article below is published as its own standalone PDF, individually linked
             </p>
           </div>
         </div>
@@ -97,15 +97,6 @@ function CurrentIssueContent() {
               Cover PDF
             </a>
           )}
-          <a
-            href={issueData.fullIssuePdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold shadow-xs transition-colors"
-          >
-            <Download className="w-4 h-4 text-[#E8D5B5]" />
-            Download Full Issue PDF
-          </a>
         </div>
       </div>
 
@@ -124,7 +115,6 @@ function CurrentIssueContent() {
           <ArticleCard
             key={article.id}
             article={article}
-            fullIssuePdf={issueData.fullIssuePdf}
           />
         ))}
       </div>

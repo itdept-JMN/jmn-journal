@@ -1,4 +1,4 @@
-import { FileText, Download, UserCheck, Calendar } from "lucide-react";
+import { FileText, UserCheck, Calendar } from "lucide-react";
 
 export interface ArticleData {
   id: string;
@@ -8,10 +8,9 @@ export interface ArticleData {
   pages: string;
   pdfUrl: string;
   abstract?: string;
-  fullIssuePdf?: string;
 }
 
-export default function ArticleCard({ article, fullIssuePdf }: { article: ArticleData; fullIssuePdf?: string }) {
+export default function ArticleCard({ article }: { article: ArticleData }) {
   return (
     <article className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-5 sm:p-6 shadow-xs hover:border-[#5B1E1E] transition-all">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -40,7 +39,7 @@ export default function ArticleCard({ article, fullIssuePdf }: { article: Articl
         </p>
       )}
 
-      {/* Access & PDF Downloads */}
+      {/* Access & PDF Download */}
       <div className="pt-3 border-t border-[#E8D5B5]/80 flex flex-wrap items-center justify-between gap-3">
         <a
           href={article.pdfUrl}
@@ -51,18 +50,6 @@ export default function ArticleCard({ article, fullIssuePdf }: { article: Articl
           <FileText className="w-4 h-4" />
           Download Article PDF
         </a>
-
-        {fullIssuePdf && (
-          <a
-            href={fullIssuePdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-stone-700 hover:text-[#5B1E1E] bg-[#F5EFE6] hover:bg-[#E8D5B5] px-3 py-2 rounded-lg border border-[#E8D5B5] transition-colors"
-          >
-            <Download className="w-3.5 h-3.5 text-[#B8860B]" />
-            Full Issue PDF
-          </a>
-        )}
       </div>
     </article>
   );

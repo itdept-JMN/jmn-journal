@@ -38,7 +38,7 @@ export default function SubmissionPage() {
         </p>
 
         <div className="bg-[#FDFBF8] p-4 rounded-lg border border-[#E8D5B5] inline-block font-mono text-sm sm:text-base font-bold text-[#5B1E1E]">
-          editor@jmnmedicalcollege.org
+          journal@jmnmch.com
         </div>
 
         <div className="space-y-2 text-xs text-stone-700 pt-2 border-t border-[#E8D5B5]/60">

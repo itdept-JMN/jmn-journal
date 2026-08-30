@@ -4,7 +4,6 @@
   "issue": 2,
   "month": "July 2026",
   "title": "Volume 1, Issue 2 (July 2026)",
-  "fullIssuePdf": "/articles/2026-v1-i2/full-issue.pdf",
   "coverPdf": "/articles/2026-v1-i2/cover-page.pdf",
   "articles": [
     {
@@ -21,14 +20,14 @@
     {
       "id": "article-02",
       "type": "Case Study / Case Report",
-      "title": "Emerging Clinical Significance of Ochrobactrum anthropi Septicemia in a Multimorbid ICU Patient: A Clinical Case Report",
+      "title": "Emerging Clinical Significance of Ochrobactrum anthropi Septicemia in a Multimorbid Intensive Care Unit Patient: A Clinical Case Report",
       "authors": [
         "Dr. Govind Raj Behera",
         "Dr. Mousumi Bhowmik"
       ],
       "pages": "6–9",
       "pdfUrl": "/articles/2026-v1-i2/article-02.pdf",
-      "abstract": "Ochrobactrum anthropi is a rare opportunistic Gram-negative bacillus recognized as a cause of nosocomial infections in critically ill patients with indwelling catheters. We report persistent O. anthropi bacteraemia in a 63-year-old ICU patient. Removal of the central venous catheter resulted in sterile repeat blood cultures and complete resolution of fever, highlighting the importance of prompt source control."
+      "abstract": "Ochrobactrum anthropi is a rare opportunistic Gram-negative bacillus recognized as a cause of nosocomial infections in critically ill patients with indwelling catheters. We report persistent O. anthropi bacteraemia in a 63-year-old intensive care unit (ICU) patient. Removal of the central venous catheter resulted in sterile repeat blood cultures and complete resolution of fever, highlighting the importance of prompt source control."
     },
     {
       "id": "article-03",

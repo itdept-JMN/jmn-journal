@@ -1,7 +1,7 @@
 import Link from "next/link";
 import issue1Data from "@/content/issues/2025-v1-i1.json";
 import issue2Data from "@/content/issues/2026-v1-i2.json";
-import { FolderArchive, Calendar, BookOpen, ArrowRight, Download } from "lucide-react";
+import { FolderArchive, Calendar, BookOpen, ArrowRight } from "lucide-react";
 
 export default function ArchivesPage() {
   const archives = [
@@ -16,7 +16,6 @@ export default function ArchivesPage() {
               month: "July 2026",
               title: issue2Data.title,
               articleCount: issue2Data.articles.length,
-              fullIssuePdf: issue2Data.fullIssuePdf,
               coverPdf: issue2Data.coverPdf,
               href: "/current-issue?issue=2026-v1-i2",
               isLatest: true,
@@ -36,7 +35,6 @@ export default function ArchivesPage() {
               month: "December 2025",
               title: issue1Data.title,
               articleCount: issue1Data.articles.length,
-              fullIssuePdf: issue1Data.fullIssuePdf,
               coverPdf: issue1Data.coverPdf,
               href: "/current-issue?issue=2025-v1-i1",
               isLatest: false,
@@ -132,15 +130,6 @@ export default function ArchivesPage() {
                               Cover PDF
                             </a>
                           )}
-                          <a
-                            href={iss.fullIssuePdf}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-white bg-[#5B1E1E] hover:bg-[#431616] px-2.5 py-1 rounded text-[11px] font-semibold"
-                          >
-                            <Download className="w-3 h-3 text-[#E8D5B5]" />
-                            Full Issue PDF
-                          </a>
                         </div>
                       </div>
                     </div>
