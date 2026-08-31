@@ -9,9 +9,16 @@ export default function Footer() {
           
           {/* Column 1: About & Masthead */}
           <div className="space-y-3 md:col-span-1">
-            <h3 className="font-masthead text-2xl text-white font-bold tracking-tight">
-              JMN Journal of Medical Sciences
-            </h3>
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/jmn-logo.png"
+                alt="JMN Journal Logo"
+                className="w-10 h-10 object-contain bg-stone-800/80 p-1 rounded-lg border border-stone-700"
+              />
+              <h3 className="font-masthead text-2xl text-white font-bold tracking-tight">
+                JMN Journal of Medical Sciences
+              </h3>
+            </div>
             <p className="text-xs text-stone-400 leading-relaxed">
               A biannual, double-blind peer-reviewed, open-access medical journal dedicated to publishing high-quality medical research and advancing healthcare clinical practice.
             </p>

@@ -27,9 +27,11 @@ export default function Navbar() {
       {/* Top Banner / Masthead Strip */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-[#5B1E1E] text-[#E8D5B5] flex items-center justify-center font-bold text-lg shadow-sm group-hover:scale-105 transition-transform">
-            <BookOpen className="w-5 h-5" />
-          </div>
+          <img
+            src="/images/jmn-logo.png"
+            alt="JMN Journal of Medical Sciences Logo"
+            className="w-11 h-11 object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
+          />
           <div>
             <span className="font-masthead text-2xl sm:text-3xl font-bold tracking-tight text-[#5B1E1E] block leading-tight">
               JMN Journal of Medical Sciences
