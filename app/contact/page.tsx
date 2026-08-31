@@ -1,4 +1,4 @@
-import { Mail, MapPin, Building, User, Laptop, BookOpen, Phone, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, Building, User, Laptop, BookOpen, Phone, ShieldCheck, ExternalLink } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -130,42 +130,70 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
           {/* Mr. Harsh Kumar Shaw */}
-          <div className="bg-[#FDFBF8] p-5 rounded-lg border border-[#E8D5B5] space-y-2">
-            <div className="flex items-center gap-2">
-              <Laptop className="w-4 h-4 text-[#5B1E1E]" />
-              <h3 className="font-bold text-stone-900 text-sm">Mr. Harsh Kumar Shaw</h3>
+          <div className="bg-[#FDFBF8] p-5 rounded-lg border border-[#E8D5B5] space-y-2 flex flex-col justify-between">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Laptop className="w-4 h-4 text-[#5B1E1E]" />
+                <h3 className="font-bold text-stone-900 text-sm">Mr. Harsh Kumar Shaw</h3>
+              </div>
+              <p className="text-xs font-semibold text-[#5B1E1E]">IT Executive, JMN Medical College (Owner / Responsible Person in ISSN App #77227)</p>
+              <p className="text-xs text-stone-600">Responsible for cloud deployment, domain management, and technical compliance.</p>
+              <div className="text-xs font-medium text-stone-700 pt-1 flex items-center justify-between">
+                <span className="flex items-center gap-1">
+                  <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
+                  <a href="mailto:harshkumar.shaw@jmnmch.com" className="text-[#5B1E1E] hover:underline">harshkumar.shaw@jmnmch.com</a>
+                </span>
+                <span className="flex items-center gap-1 font-mono">
+                  <Phone className="w-3.5 h-3.5 text-[#B8860B]" />
+                  7980415085
+                </span>
+              </div>
             </div>
-            <p className="text-xs font-semibold text-[#5B1E1E]">IT Executive, JMN Medical College (Owner / Responsible Person in ISSN App #77227)</p>
-            <p className="text-xs text-stone-600">Responsible for cloud deployment, domain management, and technical compliance.</p>
-            <div className="text-xs font-medium text-stone-700 pt-1 flex items-center justify-between">
-              <span className="flex items-center gap-1">
-                <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
-                <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] hover:underline">journal@jmnmch.com</a>
-              </span>
-              <span className="flex items-center gap-1 font-mono">
-                <Phone className="w-3.5 h-3.5 text-[#B8860B]" />
-                7980415085
-              </span>
+            <div className="pt-2 border-t border-[#E8D5B5]/60 flex items-center justify-between text-xs mt-2">
+              <span className="text-stone-500 font-medium">Profile</span>
+              <a
+                href="https://jmnmedicalcollege.org.in/wp-content/uploads/2026/08/Harsh_Resume_DS-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[#5B1E1E] hover:text-[#B8860B] font-semibold transition-colors"
+              >
+                View CV Profile
+                <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
           </div>
 
           {/* Ms. Debahuti Roy */}
-          <div className="bg-[#FDFBF8] p-5 rounded-lg border border-[#E8D5B5] space-y-2">
-            <div className="flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-[#5B1E1E]" />
-              <h3 className="font-bold text-stone-900 text-sm">Ms. Debahuti Roy</h3>
+          <div className="bg-[#FDFBF8] p-5 rounded-lg border border-[#E8D5B5] space-y-2 flex flex-col justify-between">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-[#5B1E1E]" />
+                <h3 className="font-bold text-stone-900 text-sm">Ms. Debahuti Roy</h3>
+              </div>
+              <p className="text-xs font-semibold text-[#5B1E1E]">Librarian, JMN Medical College</p>
+              <p className="text-xs text-stone-600">Responsible for library submissions, physical holdings, and indexing records.</p>
+              <div className="text-xs font-medium text-stone-700 pt-1 flex items-center justify-between">
+                <span className="flex items-center gap-1">
+                  <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
+                  <a href="mailto:debahuti.roy@jmnmch.com" className="text-[#5B1E1E] hover:underline">debahuti.roy@jmnmch.com</a>
+                </span>
+                <span className="flex items-center gap-1 font-mono">
+                  <Phone className="w-3.5 h-3.5 text-[#B8860B]" />
+                  7980415085
+                </span>
+              </div>
             </div>
-            <p className="text-xs font-semibold text-[#5B1E1E]">Librarian, JMN Medical College</p>
-            <p className="text-xs text-stone-600">Responsible for library submissions, physical holdings, and indexing records.</p>
-            <div className="text-xs font-medium text-stone-700 pt-1 flex items-center justify-between">
-              <span className="flex items-center gap-1">
-                <Mail className="w-3.5 h-3.5 text-[#B8860B]" />
-                <a href="mailto:journal@jmnmch.com" className="text-[#5B1E1E] hover:underline">journal@jmnmch.com</a>
-              </span>
-              <span className="flex items-center gap-1 font-mono">
-                <Phone className="w-3.5 h-3.5 text-[#B8860B]" />
-                7980415085
-              </span>
+            <div className="pt-2 border-t border-[#E8D5B5]/60 flex items-center justify-between text-xs mt-2">
+              <span className="text-stone-500 font-medium">Profile</span>
+              <a
+                href="https://jmnmedicalcollege.org.in/wp-content/uploads/2026/08/Debahuti-Roy-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[#5B1E1E] hover:text-[#B8860B] font-semibold transition-colors"
+              >
+                View CV Profile
+                <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
           </div>
         </div>
