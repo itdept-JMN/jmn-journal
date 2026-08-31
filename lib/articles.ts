@@ -18,7 +18,6 @@ export interface Article {
   month: string;
   year: number;
   fullIssuePdf: string;
-  coverPdf?: string;
   slug: string;
 }
 
@@ -29,7 +28,6 @@ export interface Issue {
   month: string;
   title: string;
   fullIssuePdf: string;
-  coverPdf?: string;
   articles: Array<{
     id: string;
     type: string;
@@ -64,7 +62,6 @@ export function getAllArticles(): Article[] {
         month: iss.month,
         year: iss.year,
         fullIssuePdf: iss.fullIssuePdf,
-        coverPdf: iss.coverPdf,
         slug: slug,
       });
     }

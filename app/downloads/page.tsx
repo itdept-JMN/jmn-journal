@@ -17,7 +17,7 @@ export default function DownloadsPage() {
       filename: "copyright-transfer-form.pdf",
       url: "/downloads/copyright-transfer-form.pdf",
       format: "PDF Document",
-      size: "245 KB",
+      size: "3.0 KB",
       icon: FileText,
     },
     {
@@ -26,7 +26,7 @@ export default function DownloadsPage() {
       filename: "manuscript-template.docx",
       url: "/downloads/manuscript-template.docx",
       format: "DOCX Word Template",
-      size: "180 KB",
+      size: "37.5 KB",
       icon: FileCode,
     },
     {
@@ -35,7 +35,7 @@ export default function DownloadsPage() {
       filename: "author-guidelines.pdf",
       url: "/downloads/author-guidelines.pdf",
       format: "PDF Document",
-      size: "420 KB",
+      size: "143 KB",
       icon: FileText,
     },
     {
@@ -44,7 +44,7 @@ export default function DownloadsPage() {
       filename: "coi-declaration-form.pdf",
       url: "/downloads/coi-declaration-form.pdf",
       format: "PDF Document",
-      size: "190 KB",
+      size: "3.0 KB",
       icon: ShieldAlert,
     },
   ];

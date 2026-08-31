@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://journal.jmnmedicalcollege.org.in"),
   title: "JMN Journal of Medical Sciences | Open Access Peer-Reviewed Journal",
   description:
     "JMN Journal of Medical Sciences is an official biannual, double-blind peer-reviewed open-access medical journal published by JMN Education and Research Foundation, JMN Medical College and Hospital.",
@@ -17,6 +18,22 @@ export const metadata: Metadata = {
     "Kalyani Chakdaha Medical Journal"
   ],
   authors: [{ name: "JMN Education and Research Foundation" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "JMN Journal of Medical Sciences",
+    description: "Official Biannual Peer-Reviewed Open Access Medical Journal published by JMN Education and Research Foundation, JMN Medical College.",
+    url: "https://journal.jmnmedicalcollege.org.in",
+    siteName: "JMN Journal of Medical Sciences",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JMN Journal of Medical Sciences",
+    description: "Official Biannual Peer-Reviewed Open Access Medical Journal.",
+  },
 };
 
 export default function RootLayout({

@@ -35,7 +35,7 @@ export default function Navbar() {
               JMN Journal of Medical Sciences
             </span>
             <span className="text-xs tracking-wider uppercase text-stone-600 block">
-              Official Biannual Peer-Reviewed Medical Journal · Est. 2026
+              Official Biannual Peer-Reviewed Medical Journal · Est. 2025
             </span>
           </div>
         </Link>

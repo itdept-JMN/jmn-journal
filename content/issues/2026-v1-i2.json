@@ -4,7 +4,7 @@
   "issue": 2,
   "month": "July 2026",
   "title": "Volume 1, Issue 2 (July 2026)",
-  "coverPdf": "/articles/2026-v1-i2/cover-page.pdf",
+  "fullIssuePdf": "/articles/2026-v1-i2/full-issue.pdf",
   "articles": [
     {
       "id": "article-01",

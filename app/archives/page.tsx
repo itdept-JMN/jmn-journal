@@ -16,7 +16,6 @@ export default function ArchivesPage() {
               month: "July 2026",
               title: issue2Data.title,
               articleCount: issue2Data.articles.length,
-              coverPdf: issue2Data.coverPdf,
               href: "/current-issue?issue=2026-v1-i2",
               isLatest: true,
             },
@@ -35,7 +34,6 @@ export default function ArchivesPage() {
               month: "December 2025",
               title: issue1Data.title,
               articleCount: issue1Data.articles.length,
-              coverPdf: issue1Data.coverPdf,
               href: "/current-issue?issue=2025-v1-i1",
               isLatest: false,
             },
@@ -118,19 +116,6 @@ export default function ArchivesPage() {
                           View Table of Contents
                           <ArrowRight className="w-3 h-3" />
                         </Link>
-
-                        <div className="flex items-center gap-1.5">
-                          {iss.coverPdf && (
-                            <a
-                              href={iss.coverPdf}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-stone-700 hover:text-[#5B1E1E] bg-[#FDFBF8] border border-[#E8D5B5] px-2 py-1 rounded text-[11px] font-semibold"
-                            >
-                              Cover PDF
-                            </a>
-                          )}
-                        </div>
                       </div>
                     </div>
                   ))}

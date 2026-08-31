@@ -85,19 +85,6 @@ function CurrentIssueContent() {
             </p>
           </div>
         </div>
-
-        <div className="flex items-center gap-2">
-          {issueData.coverPdf && (
-            <a
-              href={issueData.coverPdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-[#FDFBF8] text-stone-800 hover:text-[#5B1E1E] border border-[#E8D5B5] px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-colors"
-            >
-              Cover PDF
-            </a>
-          )}
-        </div>
       </div>
 
       {/* Articles List Header */}
