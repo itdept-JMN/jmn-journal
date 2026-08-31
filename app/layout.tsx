@@ -47,8 +47,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-[#FDFBF8] text-stone-900 font-body selection:bg-[#E8D5B5] selection:text-[#5B1E1E]">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-[#FDFBF8] text-stone-900 font-body selection:bg-[#E8D5B5] selection:text-[#5B1E1E]" suppressHydrationWarning>
         <Navbar />
         <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           {children}
