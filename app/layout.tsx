@@ -19,7 +19,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "JMN Education and Research Foundation" }],
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/images/jmn-logo.png", type: "image/png" },
+      { url: "/favicon.ico" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/images/jmn-logo.png",
   },
   openGraph: {
     title: "JMN Journal of Medical Sciences",

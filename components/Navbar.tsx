@@ -30,7 +30,7 @@ export default function Navbar() {
           <img
             src="/images/jmn-logo.png"
             alt="JMN Journal of Medical Sciences Logo"
-            className="w-11 h-11 object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
+            className="w-10 h-10 object-contain shadow-sm group-hover:scale-105 transition-transform"
           />
           <div>
             <span className="font-masthead text-2xl sm:text-3xl font-bold tracking-tight text-[#5B1E1E] block leading-tight">

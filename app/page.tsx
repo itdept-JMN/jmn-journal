@@ -10,41 +10,31 @@ export default function HomePage() {
       
       {/* Hero Section */}
       <section className="bg-[#F5EFE6]/50 border border-[#E8D5B5] rounded-2xl p-6 sm:p-10 shadow-xs relative overflow-hidden">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="max-w-2xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5B1E1E] text-[#E8D5B5] text-xs font-semibold">
-              <Award className="w-3.5 h-3.5" />
-              Official Biannual Open Access Publication
-            </div>
-            <h1 className="font-masthead text-3xl sm:text-5xl font-bold text-[#5B1E1E] tracking-tight leading-tight">
-              JMN Journal of Medical Sciences
-            </h1>
-            <p className="font-headline text-lg sm:text-xl text-stone-700 leading-relaxed">
-              Disseminating reliable, evidence-based medical knowledge across clinical research, public health, and healthcare delivery in the Indian subcontinent.
-            </p>
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Link
-                href="/current-issue"
-                className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm transition-colors"
-              >
-                Browse Current Issue (Vol 1, Issue 2)
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/submission"
-                className="inline-flex items-center gap-2 bg-[#FDFBF8] text-[#5B1E1E] hover:bg-[#E8D5B5] border border-[#E8D5B5] px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
-              >
-                Submit Manuscript
-              </Link>
-            </div>
+        <div className="max-w-3xl space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5B1E1E] text-[#E8D5B5] text-xs font-semibold">
+            <Award className="w-3.5 h-3.5" />
+            Official Biannual Open Access Publication
           </div>
-
-          <div className="hidden md:flex shrink-0 items-center justify-center p-3 bg-[#FDFBF8]/90 rounded-2xl border border-[#E8D5B5] shadow-xs">
-            <img
-              src="/images/jmn-logo.png"
-              alt="JMN Medical College Crest Logo"
-              className="w-32 h-32 object-contain drop-shadow-sm"
-            />
+          <h1 className="font-masthead text-3xl sm:text-5xl font-bold text-[#5B1E1E] tracking-tight leading-tight">
+            JMN Journal of Medical Sciences
+          </h1>
+          <p className="font-headline text-lg sm:text-xl text-stone-700 leading-relaxed">
+            Disseminating reliable, evidence-based medical knowledge across clinical research, public health, and healthcare delivery in the Indian subcontinent.
+          </p>
+          <div className="flex flex-wrap items-center gap-3 pt-2">
+            <Link
+              href="/current-issue"
+              className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm transition-colors"
+            >
+              Browse Current Issue (Vol 1, Issue 2)
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/submission"
+              className="inline-flex items-center gap-2 bg-[#FDFBF8] text-[#5B1E1E] hover:bg-[#E8D5B5] border border-[#E8D5B5] px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
+            >
+              Submit Manuscript
+            </Link>
           </div>
         </div>
       </section>
