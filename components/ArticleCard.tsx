@@ -2,13 +2,16 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { vancouverCitation, CURRENT_ISSUE } from "@/lib/issues";
 import { FileText, UserCheck, Calendar, BookOpen, Copy, Check, Quote, ScrollText } from "lucide-react";
 
 export interface IssueMeta {
   volume?: number;
   issue?: number;
   month?: string;
+  period?: string;
   year?: number;
+  issueId?: string;
 }
 
 export interface ArticleData {
@@ -35,27 +38,17 @@ export default function ArticleCard({
   const [copied, setCopied] = useState(false);
   const [isAbstractExpanded, setIsAbstractExpanded] = useState(false);
 
-  // Determine Volume, Issue, Month, Year (from prop or default fallback)
-  const vol = article.issueMeta?.volume || issueMeta?.volume || 1;
-  const iss = article.issueMeta?.issue || issueMeta?.issue || 1;
-  const month = article.issueMeta?.month || issueMeta?.month || "July 2026";
-  const year = article.issueMeta?.year || issueMeta?.year || 2026;
+  // Determine Volume, Issue, period and year (article fields take priority, then issue meta)
+  const art = article as ArticleData & { volume?: number; issue?: number; month?: string; period?: string; year?: number; issueId?: string; slug?: string };
+  const vol = art.volume ?? article.issueMeta?.volume ?? issueMeta?.volume ?? CURRENT_ISSUE.volume;
+  const iss = art.issue ?? article.issueMeta?.issue ?? issueMeta?.issue ?? CURRENT_ISSUE.issue;
+  const month = art.month ?? article.issueMeta?.month ?? issueMeta?.month ?? CURRENT_ISSUE.month;
+  const year = art.year ?? article.issueMeta?.year ?? issueMeta?.year ?? CURRENT_ISSUE.year;
+  const period = art.period ?? article.issueMeta?.period ?? issueMeta?.period ?? `${month} ${year}`;
+  const issueId = art.issueId ?? article.issueMeta?.issueId ?? issueMeta?.issueId ?? CURRENT_ISSUE.issueId;
 
-  // Format Vancouver / NLM Bibliographic Citation String
-  const formatAuthorName = (name: string) => {
-    const clean = name.replace(/^(Dr\.|Prof\.|Ms\.|Md\.|Mr\.)\s+/i, "").trim();
-    const parts = clean.split(/\s+/);
-    if (parts.length === 1) return parts[0];
-    const lastName = parts[parts.length - 1];
-    const initials = parts
-      .slice(0, parts.length - 1)
-      .map((p) => p[0].toUpperCase())
-      .join("");
-    return `${lastName} ${initials}`;
-  };
-
-  const formattedAuthors = article.authors.map(formatAuthorName).join(", ");
-  const citationText = `${formattedAuthors}. ${article.title.replace(/\.$/, "")}. J JMN Med Sci. ${month};${vol}(${iss}):${article.pages}.`;
+  // Vancouver / NLM bibliographic citation
+  const citationText = vancouverCitation({ authors: article.authors, title: article.title, year, month, volume: vol, issue: iss, pages: article.pages });
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(citationText);
@@ -63,7 +56,7 @@ export default function ArticleCard({
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const articleSlug = (article as any).slug || `${year === 2026 ? "2026-v1-i2" : "2025-v1-i1"}-${article.id}`;
+  const articleSlug = art.slug || `${issueId}-${article.id}`;
 
   return (
     <article className="bg-[#FDFBF8] border border-[#E8D5B5] rounded-xl p-5 sm:p-6 shadow-xs hover:border-[#5B1E1E] transition-all space-y-4">
@@ -74,7 +67,7 @@ export default function ArticleCard({
             {article.type}
           </span>
           <span className="text-[11px] font-semibold text-[#B8860B] bg-[#FDFBF8] border border-[#E8D5B5] px-2.5 py-0.5 rounded-full">
-            Vol. {vol}, Issue {iss} ({year})
+            Volume {vol}, Issue {iss}, {period}
           </span>
         </div>
 
@@ -161,7 +154,7 @@ export default function ArticleCard({
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-stone-500 pt-1">
           <span><strong>Journal:</strong> JMN Journal of Medical Sciences</span>
           <span>•</span>
-          <span><strong>Volume/Issue:</strong> Vol. {vol}, Issue {iss}</span>
+          <span><strong>Volume/Issue:</strong> Volume {vol}, Issue {iss}, {period}</span>
           <span>•</span>
           <span><strong>Pagination:</strong> pp. {article.pages}</span>
           <span>•</span>

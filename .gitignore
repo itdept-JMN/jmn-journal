@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Superseded files kept for manual review (not deployed)
+_junk_for_review/

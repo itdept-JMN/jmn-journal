@@ -3,20 +3,18 @@
 import { useSearchParams } from "next/navigation";
 import { useState, Suspense } from "react";
 import ArticleCard from "@/components/ArticleCard";
-import issue1Data from "@/content/issues/2025-v1-i1.json";
-import issue2Data from "@/content/issues/2026-v1-i2.json";
-import { Calendar, Layers, FileCheck, BookOpen } from "lucide-react";
+import { ISSUES, CURRENT_ISSUE, INAUGURAL_ISSUE, getIssue, bibLabel } from "@/lib/issues";
+import { Calendar, Layers, FileCheck, BookOpen, FileText } from "lucide-react";
 
 function CurrentIssueContent() {
   const searchParams = useSearchParams();
   const requestedIssue = searchParams.get("issue");
 
-  // Default to Issue 2 (July 2026) unless requested otherwise
-  const [selectedIssueId, setSelectedIssueId] = useState<string>(
-    requestedIssue === "2025-v1-i1" ? "2025-v1-i1" : "2026-v1-i2"
-  );
+  // Default to the current (latest) issue unless another is requested
+  const [selectedIssueId, setSelectedIssueId] = useState<string>(getIssue(requestedIssue).issueId);
 
-  const issueData = selectedIssueId === "2025-v1-i1" ? issue1Data : issue2Data;
+  const issueData = getIssue(selectedIssueId);
+  const isCurrent = issueData.issueId === CURRENT_ISSUE.issueId;
 
   return (
     <div className="space-y-8">
@@ -26,27 +24,21 @@ function CurrentIssueContent() {
           <BookOpen className="w-5 h-5 text-[#5B1E1E]" />
           <span className="font-headline font-bold text-stone-900 text-sm">Select Published Issue:</span>
         </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setSelectedIssueId("2026-v1-i2")}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors ${
-              selectedIssueId === "2026-v1-i2"
-                ? "bg-[#5B1E1E] text-white shadow-xs"
-                : "bg-[#FDFBF8] text-stone-700 hover:text-[#5B1E1E] border border-[#E8D5B5]"
-            }`}
-          >
-            Vol. 1 No. 2 (July 2026) — Latest
-          </button>
-          <button
-            onClick={() => setSelectedIssueId("2025-v1-i1")}
-            className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors ${
-              selectedIssueId === "2025-v1-i1"
-                ? "bg-[#5B1E1E] text-white shadow-xs"
-                : "bg-[#FDFBF8] text-stone-700 hover:text-[#5B1E1E] border border-[#E8D5B5]"
-            }`}
-          >
-            Vol. 1 No. 1 (Dec 2025) — Inaugural
-          </button>
+        <div className="flex flex-wrap items-center gap-2">
+          {ISSUES.map((iss) => (
+            <button
+              key={iss.issueId}
+              onClick={() => setSelectedIssueId(iss.issueId)}
+              className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors ${
+                selectedIssueId === iss.issueId
+                  ? "bg-[#5B1E1E] text-white shadow-xs"
+                  : "bg-[#FDFBF8] text-stone-700 hover:text-[#5B1E1E] border border-[#E8D5B5]"
+              }`}
+            >
+              {bibLabel(iss)}
+              {iss.issueId === CURRENT_ISSUE.issueId ? " — Latest" : iss.issueId === INAUGURAL_ISSUE.issueId ? " — Inaugural" : ""}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -54,19 +46,19 @@ function CurrentIssueContent() {
       <div className="border-b border-[#E8D5B5] pb-4">
         <div className="flex flex-wrap items-center gap-2 mb-2">
           <span className="text-xs font-bold text-[#5B1E1E] uppercase tracking-wider bg-[#F5EFE6] px-3 py-1 rounded-full">
-            {selectedIssueId === "2026-v1-i2" ? "Current Issue" : "Inaugural Issue"}
+            {isCurrent ? "Current Issue" : issueData.issueId === INAUGURAL_ISSUE.issueId ? "Inaugural Issue" : "Past Issue"}
           </span>
           <span className="text-xs font-semibold text-[#B8860B] bg-[#FDFBF8] border border-[#E8D5B5] px-3 py-1 rounded-full flex items-center gap-1">
             <Calendar className="w-3.5 h-3.5" />
-            {issueData.month} {issueData.year}
+            {issueData.periodLong}
           </span>
         </div>
 
         <h1 className="font-masthead text-3xl sm:text-4xl font-bold text-[#5B1E1E]">
-          Volume {issueData.volume}, Issue {issueData.issue}
+          Volume {issueData.volume}, Issue {issueData.issue}, {issueData.period}
         </h1>
         <p className="font-headline text-stone-600 text-sm sm:text-base mt-1">
-          Table of Contents for JMN Journal of Medical Sciences — {issueData.month} {issueData.year}
+          Table of Contents — JMN Journal of Medical Sciences, Volume {issueData.volume}, Issue {issueData.issue}, {issueData.period}
         </p>
       </div>
 
@@ -84,6 +76,25 @@ function CurrentIssueContent() {
               Each article below is published as its own standalone PDF, individually linked
             </p>
           </div>
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <a
+            href={issueData.fullIssuePdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#5B1E1E] text-white hover:bg-[#431616] px-4 py-2.5 rounded-lg text-xs font-semibold shadow-xs transition-colors"
+          >
+            <FileText className="w-4 h-4" />
+            Full Issue PDF
+          </a>
+          <a
+            href={issueData.coverPdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#FDFBF8] text-[#5B1E1E] hover:bg-[#F5EFE6] border border-[#E8D5B5] px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors"
+          >
+            Cover Page
+          </a>
         </div>
       </div>
 
@@ -106,7 +117,9 @@ function CurrentIssueContent() {
               volume: issueData.volume,
               issue: issueData.issue,
               month: issueData.month,
+              period: issueData.period,
               year: issueData.year,
+              issueId: issueData.issueId,
             }}
           />
         ))}

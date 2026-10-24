@@ -26,6 +26,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${article.title} | JMN Journal of Medical Sciences`,
     description: article.abstract?.substring(0, 160) || article.title,
     authors: article.authors.map((name) => ({ name })),
+    other: {
+      citation_title: article.title,
+      citation_author: article.authors.map((n) => n.replace(/^(Dr\.|Prof\.|Ms\.|Md\.|Mr\.)\s+/i, "")),
+      citation_journal_title: "JMN Journal of Medical Sciences",
+      citation_journal_abbrev: "JMN J Med Sci",
+      citation_publisher: "JMN Education and Research Foundation",
+      citation_volume: String(article.volume),
+      citation_issue: String(article.issue),
+      citation_firstpage: article.pages.split(/[–-]/)[0],
+      citation_lastpage: article.pages.split(/[–-]/).pop() || "",
+      citation_publication_date: String(article.year),
+      citation_pdf_url: `https://journal.jmnmedicalcollege.org.in${article.pdfUrl}`,
+      "dc.source": `JMN Journal of Medical Sciences, Volume ${article.volume}, Issue ${article.issue}, ${article.period}, pp. ${article.pages}`,
+    },
   };
 }
 
@@ -55,7 +69,7 @@ export default async function SingleArticlePage({ params }: { params: Promise<{ 
           href={`/current-issue?issue=${article.issueId}`}
           className="hover:text-[#5B1E1E] transition-colors"
         >
-          Vol. {article.volume} Issue {article.issue} ({article.month})
+          Volume {article.volume}, Issue {article.issue}, {article.period}
         </Link>
         <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
         <span className="text-stone-800 font-semibold truncate max-w-[200px] sm:max-w-xs">
@@ -78,10 +92,10 @@ export default async function SingleArticlePage({ params }: { params: Promise<{ 
           <div className="flex items-center gap-3 text-xs text-stone-600 font-semibold">
             <span className="flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5 text-[#B8860B]" />
-              {article.month} {article.year}
+              {article.periodLong}
             </span>
             <span>•</span>
-            <span>Vol. {article.volume}, Issue {article.issue}</span>
+            <span>Volume {article.volume}, Issue {article.issue}, {article.period}</span>
             <span>•</span>
             <span>pp. {article.pages}</span>
           </div>
@@ -111,6 +125,10 @@ export default async function SingleArticlePage({ params }: { params: Promise<{ 
         <div className="bg-[#F5EFE6]/40 border border-[#E8D5B5]/80 rounded-xl p-3.5 text-xs text-stone-600 flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <span><strong>Journal:</strong> JMN Journal of Medical Sciences</span>
+            <span>•</span>
+            <span><strong>Volume/Issue:</strong> Volume {article.volume}, Issue {article.issue}, {article.period}</span>
+            <span>•</span>
+            <span><strong>Pages:</strong> {article.pages}</span>
             <span>•</span>
             <span><strong>ISSN (Online):</strong> Applied (Request #77227)</span>
             <span>•</span>

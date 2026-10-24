@@ -8,7 +8,8 @@ This document tracks strict compliance with ISSN India requirements and publishe
 
 - [x] **Rule 1: Selectable Plain Text Data** — Journal particulars, Editorial Board data, and contact details exist as real text, not image graphics.
 - [x] **Rule 2: Uniform Subject String** — Subject is set identically to `"Medical Sciences"` across homepage, particulars block, meta tags, and footer.
-- [x] **Rule 3: First-Page Bibliographic Header** — All published article PDFs include Journal Name \| Volume \| Issue \| Month \| Year \| Page Range.
+- [x] **Rule 3: Complete Bibliographic Details (revised 23 Oct 2026 per ISSN India query)** — Every article PDF carries, on the first page and in the running footer of every page: Journal Name | Volume | Issue | Period & Year | Page Range (e.g. *Volume 2, Issue 1, Jan–Jun 2026, pp. 1–5*), plus an updated "How to cite" line. Same details shown on Archive, Table of Contents (current issue), article pages, full-issue PDFs and covers.
+- [x] **Rule 3a: Volume/Issue Numbering** — One volume per calendar year; only the issue number changes within a year. 2025 = Volume 1 (Issue 1, Jul–Dec 2025); 2026 = Volume 2 (Issue 1, Jan–Jun 2026). The former "Vol. 1, No. 2 (July 2026)" is renumbered Volume 2, Issue 1.
 - [x] **Rule 4: Article Access & PDF Distribution** — Individual article links and PDFs are provided along with a full issue download option (User Approved).
 - [x] **Rule 5: No Title Abbreviations** — Full, unabbreviated article titles used everywhere.
 - [x] **Rule 6: Working External Links** — All institutional and editorial board external URLs resolve cleanly.

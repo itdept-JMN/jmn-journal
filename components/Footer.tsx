@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CURRENT_ISSUE, bibLabel } from "@/lib/issues";
 import { Mail, MapPin, Building, ShieldCheck, Phone } from "lucide-react";
 
 export default function Footer() {
@@ -43,7 +44,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/current-issue" className="hover:text-white transition-colors">
-                  Current Issue (Vol 1, Issue 2)
+                  Current Issue ({bibLabel(CURRENT_ISSUE)})
                 </Link>
               </li>
               <li>

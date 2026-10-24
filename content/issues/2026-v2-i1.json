@@ -1,10 +1,13 @@
 {
   "year": 2026,
-  "volume": 1,
-  "issue": 2,
-  "month": "July 2026",
-  "title": "Volume 1, Issue 2 (July 2026)",
-  "fullIssuePdf": "/articles/2026-v1-i2/full-issue.pdf",
+  "volume": 2,
+  "issue": 1,
+  "month": "Jan–Jun",
+  "period": "Jan–Jun 2026",
+  "periodLong": "January–June 2026",
+  "title": "Volume 2, Issue 1, Jan–Jun 2026",
+  "fullIssuePdf": "/articles/2026-v2-i1/full-issue.pdf",
+  "coverPdf": "/articles/2026-v2-i1/cover-page.pdf",
   "articles": [
     {
       "id": "article-01",
@@ -14,7 +17,7 @@
         "Dr. Sayantan Makur"
       ],
       "pages": "1–5",
-      "pdfUrl": "/articles/2026-v1-i2/article-01.pdf",
+      "pdfUrl": "/articles/2026-v2-i1/article-01.pdf",
       "abstract": "Background: Osteoarticular infections in neonates and infants can cause irreversible joint damage, growth disturbance, and disability. Methods: Retrospective study of 40 eligible neonates and infants evaluating clinical characteristics, risk factors, causative organisms, treatment, and relationship between presentation delay and outcome. Results: Septic arthritis was the most common diagnosis (53%), followed by osteomyelitis (43%). The hip was the most frequent site (76.2%). Conclusion: Early recognition and definitive institutional treatment significantly reduce permanent joint damage and sequelae."
     },
     {
@@ -26,7 +29,7 @@
         "Dr. Mousumi Bhowmik"
       ],
       "pages": "6–9",
-      "pdfUrl": "/articles/2026-v1-i2/article-02.pdf",
+      "pdfUrl": "/articles/2026-v2-i1/article-02.pdf",
       "abstract": "Ochrobactrum anthropi is a rare opportunistic Gram-negative bacillus recognized as a cause of nosocomial infections in critically ill patients with indwelling catheters. We report persistent O. anthropi bacteraemia in a 63-year-old intensive care unit (ICU) patient. Removal of the central venous catheter resulted in sterile repeat blood cultures and complete resolution of fever, highlighting the importance of prompt source control."
     },
     {
@@ -38,9 +41,16 @@
         "Dr. Rajesh Nandi",
         "Dr. Anurag Mondal"
       ],
-      "pages": "10–14",
-      "pdfUrl": "/articles/2026-v1-i2/article-03.pdf",
-      "abstract": "Background: Geographic disparities in access to emergency obstetric care contribute heavily to maternal mortality. Methodology: QGIS v3.36 network analysis was used to model travel time matrices from 8 population nodes to 5 referral health hubs in South 24 Parganas. Results: Travel impedance ranged from 19.55 minutes to 125.15 minutes, with remote deltaic sectors showing extreme transit times. Conclusion: Strategic placement of emergency obstetric care facilities is needed in remote sectors."
+      "pages": "10–15",
+      "pdfUrl": "/articles/2026-v2-i1/article-03.pdf",
+      "abstract": "Background: Geographic disparities in access to emergency obstetric care contribute heavily to maternal mortality. Spatial barriers often delay life-saving clinical interventions. Aims & Objectives: This study aimed to model the travel network impedance from localized population centers to tertiary and secondary referral health facilities in South 24 Parganas, West Bengal. Methodology: A secondary spatial data analysis was conducted for the South 24 Parganas district, bounded between 21° 29′ N to 22° 33′ N latitude and 88° 3′ E to 89° 5′ E longitude. Eight population nodes and five institutional health hubs were mapped. QGIS software v 3.36 was used to calculate travel time matrices using existing road and waterway network vector layers. Bed counts and local population densities served as core attribute variables. Results: The calculated travel costs from population nodes to the closest facilities varied significantly across the geographic landscape. The minimum travel impedance recorded was 19.55 minutes. The maximum recorded travel impedance reached 125.15 minutes. Remote deltaic sectors demonstrated extreme transit times to higher-order health facilities. Conclusion: Severe spatial constraints restrict healthcare access for maternal populations within remote hubs of South 24 Parganas. Targeted infrastructure investments and strategic placement of emergency obstetric care facilities are crucial to bridge these geographic gaps.",
+      "keywords": [
+        "Geographic Information Systems",
+        "Health Services Accessibility",
+        "Maternal Health Services",
+        "Maternal Mortality",
+        "Travel Time"
+      ]
     },
     {
       "id": "article-04",
@@ -53,8 +63,8 @@
         "Dr. Arpita Das",
         "Dr. Aninda Dhar"
       ],
-      "pages": "15–17",
-      "pdfUrl": "/articles/2026-v1-i2/article-04.pdf",
+      "pages": "16–19",
+      "pdfUrl": "/articles/2026-v2-i1/article-04.pdf",
       "abstract": "Background: Grey-top sodium fluoride (NaF) vials are used for blood glucose estimation, but their stability over time requires evaluation. Methods: 12 retained blood glucose samples across 4 glucose levels were rerun at baseline, 24h, 48h, 72h, 7d, and 14d on a Vitros 4600 dry chemistry system. Results & Conclusion: Statistically significant difference observed at 24 hours onward (p<0.05). NaF vials are reliably stable up to 24 hours after sample collection."
     },
     {
@@ -65,8 +75,8 @@
         "Dr. Rajarshi Roy",
         "Dr. Amitesh Bhowal"
       ],
-      "pages": "18–20",
-      "pdfUrl": "/articles/2026-v1-i2/article-05.pdf",
+      "pages": "20–22",
+      "pdfUrl": "/articles/2026-v2-i1/article-05.pdf",
       "abstract": "Intestinal malrotation is a rare congenital anomaly resulting from abnormal rotation and fixation of the midgut. We report a unique case discovered during undergraduate cadaveric dissection where the caecum and ileocecal junction were located in the left iliac fossa with small intestinal loops on the right side of the abdomen."
     },
     {
@@ -77,8 +87,8 @@
         "Dr. Arpita Das",
         "Dr. Bobby Paul"
       ],
-      "pages": "21–26",
-      "pdfUrl": "/articles/2026-v1-i2/article-06.pdf",
+      "pages": "23–27",
+      "pdfUrl": "/articles/2026-v2-i1/article-06.pdf",
       "abstract": "Background: Consumer awareness and proper e-waste disposal are critical to minimizing environmental and public health hazards. Methods: Online survey of 439 adult residents of Kolkata. Results: Satisfactory awareness level was found in 79% of participants (associated with younger age, higher education, and professional employment). However, only 4.1% deposited e-waste at designated collection points."
     }
   ]

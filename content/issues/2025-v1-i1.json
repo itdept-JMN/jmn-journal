@@ -2,9 +2,12 @@
   "year": 2025,
   "volume": 1,
   "issue": 1,
-  "month": "December 2025",
-  "title": "Volume 1, Issue 1 (December 2025)",
+  "month": "Jul–Dec",
+  "period": "Jul–Dec 2025",
+  "periodLong": "July–December 2025",
+  "title": "Volume 1, Issue 1, Jul–Dec 2025",
   "fullIssuePdf": "/articles/2025-v1-i1/full-issue.pdf",
+  "coverPdf": "/articles/2025-v1-i1/cover-page.pdf",
   "articles": [
     {
       "id": "editorial",
@@ -46,8 +49,8 @@
       "type": "Case Study / Case Report",
       "title": "Management of Mesiodens: A Supernumerary Tooth",
       "authors": [
-        "Dr. E. Sahoo Rahul",
-        "Dr. Hari Rishita"
+        "Dr. Rahul Sahoo",
+        "Dr. Rishita Hari"
       ],
       "pages": "19–22",
       "pdfUrl": "/articles/2025-v1-i1/article-03.pdf",

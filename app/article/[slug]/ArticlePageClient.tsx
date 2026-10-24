@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Article } from "@/lib/articles";
+import { vancouverCitation } from "@/lib/issues";
 import { FileText, Download, Copy, Check, Quote, Eye, EyeOff, Share2, BookOpen, ScrollText, CheckCircle } from "lucide-react";
 
 export default function ArticlePageClient({ article }: { article: Article }) {
@@ -9,21 +10,8 @@ export default function ArticlePageClient({ article }: { article: Article }) {
   const [copiedCitation, setCopiedCitation] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
 
-  // Format Vancouver / NLM Citation
-  const formatAuthorName = (name: string) => {
-    const clean = name.replace(/^(Dr\.|Prof\.|Ms\.|Md\.|Mr\.)\s+/i, "").trim();
-    const parts = clean.split(/\s+/);
-    if (parts.length === 1) return parts[0];
-    const lastName = parts[parts.length - 1];
-    const initials = parts
-      .slice(0, parts.length - 1)
-      .map((p) => p[0].toUpperCase())
-      .join("");
-    return `${lastName} ${initials}`;
-  };
-
-  const formattedAuthors = article.authors.map(formatAuthorName).join(", ");
-  const citationText = `${formattedAuthors}. ${article.title.replace(/\.$/, "")}. J JMN Med Sci. ${article.month};${article.volume}(${article.issue}):${article.pages}.`;
+  // Vancouver / NLM citation
+  const citationText = vancouverCitation(article);
 
   const copyCitation = () => {
     navigator.clipboard.writeText(citationText);
@@ -165,7 +153,7 @@ export default function ArticlePageClient({ article }: { article: Article }) {
 
           <div className="bg-[#F5EFE6]/30 p-3 rounded-lg border border-[#E8D5B5]/50">
             <span className="text-stone-500 font-medium block">Volume & Issue</span>
-            <strong className="text-stone-900 font-semibold">Vol. {article.volume}, Issue {article.issue} ({article.month})</strong>
+            <strong className="text-stone-900 font-semibold">Volume {article.volume}, Issue {article.issue}, {article.period}</strong>
           </div>
 
           <div className="bg-[#F5EFE6]/30 p-3 rounded-lg border border-[#E8D5B5]/50">

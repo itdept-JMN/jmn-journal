@@ -1,47 +1,32 @@
 import Link from "next/link";
-import issue1Data from "@/content/issues/2025-v1-i1.json";
-import issue2Data from "@/content/issues/2026-v1-i2.json";
-import { FolderArchive, Calendar, BookOpen, ArrowRight } from "lucide-react";
+import { ISSUES, CURRENT_ISSUE } from "@/lib/issues";
+import { FolderArchive, Calendar, BookOpen, ArrowRight, FileText } from "lucide-react";
 
 export default function ArchivesPage() {
-  const archives = [
-    {
-      year: 2026,
-      volumes: [
-        {
-          volumeNumber: 1,
-          issues: [
-            {
-              issueNumber: 2,
-              month: "July 2026",
-              title: issue2Data.title,
-              articleCount: issue2Data.articles.length,
-              href: "/current-issue?issue=2026-v1-i2",
-              isLatest: true,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      year: 2025,
-      volumes: [
-        {
-          volumeNumber: 1,
-          issues: [
-            {
-              issueNumber: 1,
-              month: "December 2025",
-              title: issue1Data.title,
-              articleCount: issue1Data.articles.length,
-              href: "/current-issue?issue=2025-v1-i1",
-              isLatest: false,
-            },
-          ],
-        },
-      ],
-    },
-  ];
+  // Year → Volume → Issue (one volume per calendar year)
+  const years = Array.from(new Set(ISSUES.map((i) => i.year))).sort((a, b) => b - a);
+  const archives = years.map((year) => {
+    const ofYear = ISSUES.filter((i) => i.year === year);
+    const volNos = Array.from(new Set(ofYear.map((i) => i.volume)));
+    return {
+      year,
+      volumes: volNos.map((volumeNumber) => ({
+        volumeNumber,
+        issues: ofYear
+          .filter((i) => i.volume === volumeNumber)
+          .sort((a, b) => b.issue - a.issue)
+          .map((i) => ({
+            issueNumber: i.issue,
+            month: i.period,
+            title: i.title,
+            articleCount: i.articles.length,
+            href: `/current-issue?issue=${i.issueId}`,
+            fullIssuePdf: i.fullIssuePdf,
+            isLatest: i.issueId === CURRENT_ISSUE.issueId,
+          })),
+      })),
+    };
+  });
 
   return (
     <div className="space-y-8">
@@ -73,7 +58,7 @@ export default function ArchivesPage() {
               <div key={vol.volumeNumber} className="space-y-4">
                 <h3 className="font-headline text-lg font-bold text-stone-800 flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#B8860B]" />
-                  Volume {vol.volumeNumber}
+                  Volume {vol.volumeNumber} ({yearGroup.year})
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4">
@@ -116,6 +101,15 @@ export default function ArchivesPage() {
                           View Table of Contents
                           <ArrowRight className="w-3 h-3" />
                         </Link>
+                        <a
+                          href={iss.fullIssuePdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-stone-700 font-semibold hover:text-[#5B1E1E]"
+                        >
+                          <FileText className="w-3.5 h-3.5" />
+                          Full Issue PDF
+                        </a>
                       </div>
                     </div>
                   ))}

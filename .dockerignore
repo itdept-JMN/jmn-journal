@@ -3,3 +3,7 @@ node_modules
 .git
 .env*.local
 *.log
+
+_junk_for_review
+Assets
+tools
