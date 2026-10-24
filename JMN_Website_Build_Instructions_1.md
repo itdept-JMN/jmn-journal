@@ -326,4 +326,25 @@ Before considering the build complete, verify every item:
 
 ---
 
+## 13. Implementation Addendum & Post-Brief Adjustments (October 2026)
+
+Following preliminary review with ISSN India guidelines and user approvals, the following adjustments were incorporated into the production build:
+
+1. **Volume & Issue Numbering**:
+   - Volume numbers are strictly tied to calendar years: **2025 = Volume 1**, **2026 = Volume 2**.
+   - Volume 1, Issue 1: *July–December 2025* (Inaugural issue).
+   - Volume 2, Issue 1: *January–June 2026* (Current issue).
+   - Replaced earlier draft convention where Volume 1 spanned across both 2025 and 2026.
+
+2. **Full-Issue Assembled PDFs (User Approved)**:
+   - While each article is individually published and directly downloadable from its own landing page and table of contents, high-resolution full-issue assembled PDFs (including bookmarks, cover page, and TOC) are also provided for readers and archival preservation.
+
+3. **Article PDF Bibliographic Stamping**:
+   - PyMuPDF tooling (`tools/pdf-bibliographic/`) was established to stamp permanent first-page bibliographic strips (`JMN Journal of Medical Sciences • Volume X, Issue Y, Period • pp. a–b`) and continuous running footers across all article PDFs, with true text redaction of any conflicting legacy text.
+
+4. **Dynamic Article Landing Pages**:
+   - Implemented individual static landing pages for every published article under `/article/[slug]` with Google Scholar / Highwire Press compliant metadata tags (`citation_title`, `citation_author`, etc.) to facilitate indexing.
+
+---
+
 *This brief was prepared alongside the publisher's ISSN application checklist, data collection sheet, and finalised About-page copy. Treat those as the source of truth if anything here needs updating — this document should be regenerated from them, not edited independently, if the underlying data changes.*

@@ -66,6 +66,17 @@
 - **Superseded files** moved (not deleted) to `_junk_for_review/` (git- and docker-ignored).
 - **Re-usable tooling**: `tools/pdf-bibliographic/` (PyMuPDF scripts used to stamp and assemble issues).
 
+---
+
 ## Phase 8: Author Corrections (24 Oct 2026)
 - **Geospatial article (Vol 2, Issue 1)**: re-typeset from the authors' Word file (`tools/pdf-bibliographic/geospatial-source/`), full unabridged text, third author **Dr. Anurag Mondal** (Senior Resident, Dept. of Community and Family Medicine, AIIMS Guwahati; ORCID 0009-0000-4508-7291) added to byline, citation and website. Table 1 and Figures 1–2 now placed in the text near their first reference; back matter (Limitations, Authors' Contribution, Funding, Conflict of Interest, Acknowledgement, AI declaration) added. Article grows to 6 pages: pp. 10–15; following articles renumbered (fluoride 16–19, malrotation 20–22, e-waste 23–27).
 - **Mesiodens article (Vol 1, Issue 1)**: author names corrected to first name + surname — Rahul Sahoo, Rishita Hari; citation "Sahoo R, Hari R"; corresponding author line updated; asterisk kept only on the corresponding author (Dr. Rahul Sahoo).
+
+---
+
+## Phase 9: Documentation Refresh & Compliance Audit (24 Oct 2026)
+- **README Overhaul**: Completely rewrote [README.md](file:///f:/jmn-journal/README.md) from the generic Next.js scaffold into a comprehensive journal project documentation covering particulars, volume listings, architecture, quickstart, and PDF tooling.
+- **System Architecture**: Updated [docs/SYSTEM_ARCHITECTURE.md](file:///f:/jmn-journal/docs/SYSTEM_ARCHITECTURE.md) to Next.js 16 App Router (Turbopack), 26 prerendered static routes (including 12 individual article SSG pages), `lib/issues.ts` registry, and PyMuPDF pipeline.
+- **Bugs and Issues Log**: Documented resolutions BUG-003 through BUG-006 and recorded the clean 26-route static export verification.
+- **ISSN Checklist**: Refined [docs/ISSN_COMPLIANCE_CHECKLIST.md](file:///f:/jmn-journal/docs/ISSN_COMPLIANCE_CHECKLIST.md) into an audit matrix for all 10 ISSN rules and technical criteria.
+- **Claude & Agent Instructions**: Updated [CLAUDE.md](file:///f:/jmn-journal/CLAUDE.md) with developer instructions, tech stack details, and coding conventions.
