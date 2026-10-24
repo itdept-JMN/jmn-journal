@@ -3,7 +3,6 @@ export default function JournalParticulars() {
     { label: "Title of Journal", value: "JMN Journal of Medical Sciences" },
     { label: "ISSN Application Request ID", value: "77227 (Registered Aug 29, 2026, NIScPR, New Delhi)" },
     { label: "ISSN (Online)", value: "Applied (Request ID: 77227)" },
-    { label: "ISSN (Print)", value: "Applied" },
     { label: "Frequency", value: "Two issues per year (Biannual)" },
     { label: "Language", value: "English" },
     { label: "Starting Year", value: "2025" },

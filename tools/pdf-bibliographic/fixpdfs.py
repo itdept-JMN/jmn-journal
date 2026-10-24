@@ -72,7 +72,17 @@ def _mesiodens_names(page):
                      fontname="tiro", fontsize=8.2)
 
 
+def _fluoride_affil(page):
+    # Ms. Namrata Chatterjee is a Senior Resident (confirmed by publisher, 24 Oct 2026)
+    page.insert_text((116.9, 210.0), "Senior Resident, Department of Biochemistry, JMN Medical College, Chakdaha",
+                     fontname="pagr", fontsize=9)
+
+
 NAME_PATCH = {
+    ("2026-v2-i1", "article-04"): {
+        "redact": [(116.5, 203.0, 400, 211.8)],
+        "draw": _fluoride_affil,
+    },
     ("2025-v1-i1", "article-03"): {
         "redact": [(200, 167.5, 412, 181.5), (114, 411.0, 470, 419.2)],
         "draw": _mesiodens_names,

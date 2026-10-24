@@ -18,6 +18,7 @@ def fix_cover(iss):
     r, g, b = pix.pixel(4, 8)[:3]
     bg = (r / 255, g / 255, b / 255)
     p.add_redact_annot(band)
+    p.add_redact_annot(pymupdf.Rect(121, 76, 206, 85.8))  # 'ISSN: Applied (Print)' - only the Online ISSN has been applied for
     p.add_redact_annot(bi)
     p.apply_redactions(images=pymupdf.PDF_REDACT_IMAGE_NONE, graphics=pymupdf.PDF_REDACT_LINE_ART_NONE)
     p.draw_rect(band, color=None, fill=bg, overlay=True)
@@ -57,7 +58,7 @@ def contents_page(iss):
     body = f"""
 <h1>{JOURNAL}</h1>
 <p class='bib'>Volume {iss['volume']}, Issue {iss['issue']}, {iss['period']} &nbsp;•&nbsp; Published bi-annually</p>
-<p class='bib'>ISSN (Print): Applied for &nbsp;•&nbsp; ISSN (Online): Applied for</p>
+<p class='bib'>ISSN (Online): Applied for</p>
 <h2>CONTENTS</h2>
 <table>
 <tr><th style='width:46%'>Section / Article</th><th style='width:24%'>Authors</th><th style='width:20%'>Type</th><th style='width:10%'>Pages</th></tr>
