@@ -19,7 +19,8 @@ export default function ArchivesPage() {
             issueNumber: i.issue,
             month: i.period,
             title: i.title,
-            articleCount: i.articles.length,
+            articleCount: i.articles.filter((a) => a.type !== "Editorial").length,
+            editorialCount: i.articles.filter((a) => a.type === "Editorial").length,
             href: `/current-issue?issue=${i.issueId}`,
             fullIssuePdf: i.fullIssuePdf,
             isLatest: i.issueId === CURRENT_ISSUE.issueId,
@@ -88,7 +89,7 @@ export default function ArchivesPage() {
                         </h4>
 
                         <p className="text-xs text-stone-600">
-                          Contains {iss.articleCount} Peer-Reviewed Articles
+                          Contains {iss.articleCount} Peer-Reviewed Articles{iss.editorialCount > 0 ? " and an Editorial" : ""}
                         </p>
                       </div>
 

@@ -24,7 +24,7 @@ export default function AboutPage() {
             About the Journal
           </h2>
           <p className="text-sm text-stone-700 leading-relaxed">
-            JMN Journal of Medical Sciences is an official publication of JMN Medical College and Hospital, which began its academic journey in 2023 with the MBBS course. The journal is a double-blind peer-reviewed, open-access publication, with a frequency of two issues per year (Biannual). The first issue will be published soon.
+            JMN Journal of Medical Sciences is an official publication of JMN Medical College and Hospital, which began its academic journey in 2023 with the MBBS course. The journal is a double-blind peer-reviewed, open-access publication, with a frequency of two issues per year (Biannual).
           </p>
         </div>
 

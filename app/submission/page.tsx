@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, CheckCircle, AlertCircle, FileText, ArrowRight } from "lucide-react";
+import { Mail, CheckCircle, FileText, ArrowRight } from "lucide-react";
 
 export default function SubmissionPage() {
   return (
@@ -69,7 +69,7 @@ export default function SubmissionPage() {
           Manuscript Processing Charges (APC) Table
         </h2>
         <p className="text-xs sm:text-sm text-stone-600">
-          Charges are levied per accepted article to cover typesetting, copyediting, static web hosting, and DOI registration.
+          Charges are levied per accepted article to cover copyediting, typesetting and online publication.
         </p>
 
         <div className="overflow-x-auto">
@@ -101,19 +101,11 @@ export default function SubmissionPage() {
                   ₹3,000
                 </td>
                 <td className="p-3.5 border border-[#E8D5B5]/60 text-stone-800 font-medium">
-                  USD 20*
+                  USD 20
                 </td>
               </tr>
             </tbody>
           </table>
-        </div>
-
-        {/* Flagged Assumption Note */}
-        <div className="bg-[#F5EFE6]/60 p-3.5 rounded-lg border border-[#E8D5B5] text-xs text-stone-600 flex items-start gap-2">
-          <AlertCircle className="w-4 h-4 text-[#B8860B] shrink-0 mt-0.5" />
-          <span>
-            <strong>*Note:</strong> The USD 20 figure for foreign case reports applies the 60% ratio of the Indian author tier (₹3,000 / ₹5,000). Confirmed by publisher for launch pricing.
-          </span>
         </div>
       </section>
 

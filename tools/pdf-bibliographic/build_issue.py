@@ -2,8 +2,8 @@ import pymupdf, json, os, html
 from fixpdfs import ISSUES, SRC, OUT, JOURNAL
 
 YEL = (1, 0.8392, 0)
-BACK = os.path.join(SRC, "Assets/JMN_Volume_1_Issue_1/99-back-page.pdf")
-GUIDE = os.path.join(SRC, "Assets/JMN_Volume_1_Issue_1/Author_Guidelines.pdf")
+BACK = "/tmp/claude-0/-home-claude/87ce0310-1ab9-56b2-a716-be42bb04160c/scratchpad/fix/about-journal-profile.pdf"  # corrected back page
+GUIDE = "/tmp/claude-0/-home-claude/87ce0310-1ab9-56b2-a716-be42bb04160c/scratchpad/fix/author-guidelines.pdf"  # rebuilt, no internal notes
 TOC = json.load(open(os.path.join(os.path.dirname(__file__), "toc.json"), encoding="utf-8"))
 PAGIN = json.load(open(os.path.join(OUT, "pagination.json"), encoding="utf-8"))
 

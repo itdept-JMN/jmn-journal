@@ -15,6 +15,8 @@ function CurrentIssueContent() {
 
   const issueData = getIssue(selectedIssueId);
   const isCurrent = issueData.issueId === CURRENT_ISSUE.issueId;
+  const researchCount = issueData.articles.filter((a) => a.type !== "Editorial").length;
+  const editorialCount = issueData.articles.length - researchCount;
 
   return (
     <div className="space-y-8">
@@ -87,14 +89,6 @@ function CurrentIssueContent() {
             <FileText className="w-4 h-4" />
             Full Issue PDF
           </a>
-          <a
-            href={issueData.coverPdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#FDFBF8] text-[#5B1E1E] hover:bg-[#F5EFE6] border border-[#E8D5B5] px-4 py-2.5 rounded-lg text-xs font-semibold transition-colors"
-          >
-            Cover Page
-          </a>
         </div>
       </div>
 
@@ -102,7 +96,7 @@ function CurrentIssueContent() {
       <div className="flex items-center justify-between border-b border-stone-300 pb-2">
         <h2 className="font-headline text-xl font-bold text-[#5B1E1E] flex items-center gap-2">
           <FileCheck className="w-5 h-5 text-[#B8860B]" />
-          Articles in this Issue ({issueData.articles.length})
+          Contents of this Issue ({researchCount} {researchCount === 1 ? "Article" : "Articles"}{editorialCount > 0 ? " + Editorial" : ""})
         </h2>
         <span className="text-xs text-stone-500 font-medium">Individual Article Downloads Available Below</span>
       </div>

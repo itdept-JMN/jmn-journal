@@ -63,47 +63,61 @@ export default function AuthorGuidelinesPage() {
               <thead>
                 <tr className="bg-[#F5EFE6] text-[#5B1E1E]">
                   <th className="p-3 border border-[#E8D5B5]">Article Type</th>
-                  <th className="p-3 border border-[#E8D5B5]">Word Count Limit</th>
-                  <th className="p-3 border border-[#E8D5B5]">Abstract Limit</th>
-                  <th className="p-3 border border-[#E8D5B5]">Max References</th>
+                  <th className="p-3 border border-[#E8D5B5]">Word Count</th>
+                  <th className="p-3 border border-[#E8D5B5]">Abstract / Summary</th>
+                  <th className="p-3 border border-[#E8D5B5]">References</th>
                   <th className="p-3 border border-[#E8D5B5]">Tables / Figures</th>
+                  <th className="p-3 border border-[#E8D5B5]">Authors</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-[#E8D5B5]/60">
-                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Original Research Article</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">3,500 words</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">250 words (Structured)</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">30 references</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">Up to 6 total</td>
+                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Original Article</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">2,500–3,000 words (excluding abstract, references and tables)</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Structured, 250–300 words</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">50 or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">10 or fewer (combined)</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">6 or fewer</td>
                 </tr>
                 <tr className="border-b border-[#E8D5B5]/60 bg-[#F5EFE6]/20">
-                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Review / Systematic Review</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">4,500 words</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">300 words (Unstructured)</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">50 references</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">Up to 8 total</td>
+                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Review / Special Article</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">4,000 words or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Unstructured, 250–300 words</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">50 or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">10 or fewer (combined)</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">6 or fewer</td>
                 </tr>
                 <tr className="border-b border-[#E8D5B5]/60">
-                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Case Report / Series</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">1,500 words</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">150 words</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">15 references</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">Up to 4 total</td>
+                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Short Research / Theoretical Article</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">1,500 words or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Unstructured, 150 words or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">50 or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">10 or fewer (combined)</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">6 or fewer</td>
                 </tr>
                 <tr className="border-b border-[#E8D5B5]/60 bg-[#F5EFE6]/20">
-                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Short Communication</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">1,200 words</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">100 words</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">10 references</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">Up to 2 total</td>
+                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Case Study / Case Series Report</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">1,000 words or fewer (excluding abstract and references)</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Unstructured, 100 words or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">50 or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">10 or fewer (combined)</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">4 or fewer</td>
                 </tr>
-                <tr>
-                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Letter to Editor</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">750 words</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">N/A</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">5 references</td>
-                  <td className="p-3 border border-[#E8D5B5]/60">1 total</td>
+                <tr className="border-b border-[#E8D5B5]/60">
+                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Letter to the Editor</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">500 words or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">None</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">50 or fewer</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Not applicable</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">4 or fewer</td>
+                </tr>
+                <tr className="border-b border-[#E8D5B5]/60 bg-[#F5EFE6]/20">
+                  <td className="p-3 font-semibold border border-[#E8D5B5]/60">Editorial / Guest Editorial</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Not applicable</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">None</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Not applicable</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Not applicable</td>
+                  <td className="p-3 border border-[#E8D5B5]/60">Editorial team / invited</td>
                 </tr>
               </tbody>
             </table>
@@ -134,9 +148,8 @@ export default function AuthorGuidelinesPage() {
           </h2>
           <p>Each submitted manuscript should follow this order:</p>
           <ul className="list-disc list-inside space-y-1.5 text-stone-700">
-             animate-pulse
             <li><strong>Title Page:</strong> Full title (no abbreviations), complete author details, institutional affiliations, and corresponding author email.</li>
-            <li><strong>Abstract & Keywords:</strong> 3 to 6 MeSH keywords following the abstract.</li>
+            <li><strong>Abstract & Keywords:</strong> Not more than 6 key words (MeSH terms preferred), in alphabetical order, following the abstract.</li>
             <li><strong>Main Text:</strong> Introduction, Material & Methods, Results, Discussion, Conclusion.</li>
             <li><strong>Declarations:</strong> Ethical approval details, consent statement, conflict of interest declaration, funding source.</li>
             <li><strong>References:</strong> Vancouver style numbering matching occurrence in text.</li>

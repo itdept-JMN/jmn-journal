@@ -180,8 +180,8 @@ export default function EditorialBoardPage() {
       <div className="bg-[#F5EFE6]/60 border border-[#E8D5B5] rounded-xl p-4 flex items-start gap-3 text-xs sm:text-sm text-stone-700">
         <Info className="w-5 h-5 text-[#5B1E1E] shrink-0 mt-0.5" />
         <div>
-          <strong className="text-stone-900 block font-semibold">ISSN India Compliance Notice:</strong>
-          Every member below is listed in plain selectable text with institutional designation and department address. Institutional e-mail and institution-hosted profile links are being collected from each member and will be added here as they are confirmed &mdash; only real, verified values are published on this page.
+          <strong className="text-stone-900 block font-semibold">About the Editorial Board</strong>
+          Each member is listed with designation, department, institutional address, institutional e-mail and a link to the institutional profile.
         </div>
       </div>
 

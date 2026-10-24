@@ -12,27 +12,27 @@ ISSUES = [
     {
         "id": "2025-v1-i1", "volume": 1, "issue": 1, "year": 2025,
         "period": "Jul–Dec 2025", "periodLong": "July–December 2025", "vanc": "2025 Jul–Dec",
-        "cover": "public/articles/2025-v1-i1/cover-page.pdf",
+        "cover": "_junk_for_review/public/articles/2025-v1-i1-original/cover-page.pdf",
         "items": [
-            ("editorial", "public/articles/2025-v1-i1/editorial.pdf", None),
-            ("article-01", "public/articles/2025-v1-i1/article-01.pdf", None),
-            ("article-02", "public/articles/2025-v1-i1/article-02.pdf", None),
-            ("article-03", "public/articles/2025-v1-i1/article-03.pdf", None),
-            ("article-04", "public/articles/2025-v1-i1/article-04.pdf", None),
-            ("article-05", "public/articles/2025-v1-i1/article-05.pdf", None),
+            ("editorial", "_junk_for_review/public/articles/2025-v1-i1-original/editorial.pdf", None),
+            ("article-01", "_junk_for_review/public/articles/2025-v1-i1-original/article-01.pdf", None),
+            ("article-02", "_junk_for_review/public/articles/2025-v1-i1-original/article-02.pdf", None),
+            ("article-03", "_junk_for_review/public/articles/2025-v1-i1-original/article-03.pdf", None),
+            ("article-04", "_junk_for_review/public/articles/2025-v1-i1-original/article-04.pdf", None),
+            ("article-05", "_junk_for_review/public/articles/2025-v1-i1-original/article-05.pdf", None),
         ],
     },
     {
         "id": "2026-v2-i1", "volume": 2, "issue": 1, "year": 2026,
         "period": "Jan–Jun 2026", "periodLong": "January–June 2026", "vanc": "2026 Jan–Jun",
-        "cover": "public/articles/2026-v1-i2/cover-page.pdf",
+        "cover": "_junk_for_review/public/articles/2026-v1-i2/cover-page.pdf",
         "items": [
-            ("article-01", "public/articles/2026-v1-i2/article-01.pdf", None),
-            ("article-02", "public/articles/2026-v1-i2/article-02.pdf", None),
+            ("article-01", "_junk_for_review/public/articles/2026-v1-i2/article-01.pdf", None),
+            ("article-02", "_junk_for_review/public/articles/2026-v1-i2/article-02.pdf", None),
             ("article-03", "/tmp/claude-0/-home-claude/87ce0310-1ab9-56b2-a716-be42bb04160c/scratchpad/geo/article.pdf", None),  # re-typeset from authors' Word file (adds Dr. Anurag Mondal, Table 1, Figures 1-2)
-            ("article-04", "public/articles/2026-v1-i2/article-04.pdf", None),
-            ("article-05", "public/articles/2026-v1-i2/article-05.pdf", None),
-            ("article-06", "public/articles/2026-v1-i2/article-06.pdf", 5),  # drop stray 6th page
+            ("article-04", "_junk_for_review/public/articles/2026-v1-i2/article-04.pdf", None),
+            ("article-05", "_junk_for_review/public/articles/2026-v1-i2/article-05.pdf", None),
+            ("article-06", "_junk_for_review/public/articles/2026-v1-i2/article-06.pdf", 5),  # drop stray 6th page
         ],
     },
 ]

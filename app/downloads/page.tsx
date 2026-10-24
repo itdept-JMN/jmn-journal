@@ -8,7 +8,7 @@ export default function DownloadsPage() {
       filename: "about-journal-profile.pdf",
       url: "/downloads/about-journal-profile.pdf",
       format: "PDF Document",
-      size: "1.9 MB",
+      size: "2.0 MB",
       icon: FileText,
     },
     {
@@ -35,7 +35,7 @@ export default function DownloadsPage() {
       filename: "author-guidelines.pdf",
       url: "/downloads/author-guidelines.pdf",
       format: "PDF Document",
-      size: "143 KB",
+      size: "47 KB",
       icon: FileText,
     },
     {

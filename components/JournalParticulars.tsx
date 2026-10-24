@@ -9,7 +9,7 @@ export default function JournalParticulars() {
     { label: "Starting Year", value: "2025" },
     { label: "Publication Format", value: "Online (Open Access)" },
     { label: "Publication URL", value: "https://journal.jmnmedicalcollege.org.in/" },
-    { label: "Subject", value: "Medical sciences" },
+    { label: "Subject", value: "Medical Sciences" },
     { label: "Name of Issuing / Publishing Body", value: "JMN Medical College" },
     { label: "Owner / Responsible Person", value: "Harsh Kumar Shaw" },
     { label: "Publisher Address", value: "JMN Medical College, Uttar Panchpota, P.O & P.S. Chakdaha, Dist. Nadia, PIN: 741222, West Bengal, India" },

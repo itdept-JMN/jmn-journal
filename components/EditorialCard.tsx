@@ -33,35 +33,31 @@ export default function EditorialCard({ member }: { member: EditorialMember }) {
             <MapPin className="w-3.5 h-3.5 text-[#B8860B] shrink-0 mt-0.5" />
             <span>{member.institution}, {member.address}</span>
           </div>
-          <div className="flex items-center gap-1.5">
-            <Mail className="w-3.5 h-3.5 text-[#B8860B] shrink-0" />
-            {member.email ? (
+          {member.email && (
+            <div className="flex items-center gap-1.5">
+              <Mail className="w-3.5 h-3.5 text-[#B8860B] shrink-0" />
               <a href={`mailto:${member.email}`} className="text-[#5B1E1E] hover:underline">
                 {member.email}
               </a>
-            ) : (
-              <span className="italic text-stone-400">Institutional e-mail pending</span>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
 
+      {member.profileUrl && (
       <div className="pt-2 border-t border-[#E8D5B5]/60 flex items-center justify-between text-xs">
         <span className="text-stone-500 font-medium">Faculty Profile</span>
-        {member.profileUrl ? (
-          <a
-            href={member.profileUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-[#5B1E1E] hover:text-[#B8860B] font-semibold transition-colors"
-          >
-            View Institutional Profile
-            <ExternalLink className="w-3 h-3" />
-          </a>
-        ) : (
-          <span className="italic text-stone-400">Profile link pending</span>
-        )}
+        <a
+          href={member.profileUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-[#5B1E1E] hover:text-[#B8860B] font-semibold transition-colors"
+        >
+          View Institutional Profile
+          <ExternalLink className="w-3 h-3" />
+        </a>
       </div>
+      )}
     </div>
   );
 }

@@ -80,3 +80,11 @@
 - **Bugs and Issues Log**: Documented resolutions BUG-003 through BUG-006 and recorded the clean 26-route static export verification.
 - **ISSN Checklist**: Refined [docs/ISSN_COMPLIANCE_CHECKLIST.md](file:///f:/jmn-journal/docs/ISSN_COMPLIANCE_CHECKLIST.md) into an audit matrix for all 10 ISSN rules and technical criteria.
 - **Claude & Agent Instructions**: Updated [CLAUDE.md](file:///f:/jmn-journal/CLAUDE.md) with developer instructions, tech stack details, and coding conventions.
+
+## Phase 9: Full Website Scrutiny (24 Oct 2026)
+- Archive / issue pages count research articles separately from the editorial (Vol 1 Issue 1: 5 articles + editorial). Single cover-page button removed (cover remains inside the full-issue PDF); unlinked cover PDFs moved to `_junk_for_review/`.
+- Author Guidelines web table aligned with the official guidelines PDF (limits, authors column, editorial row); stray "animate-pulse" text removed; keyword rule aligned.
+- Author Guidelines PDF rebuilt without internal revision notes; ICMJE criteria listed as four items. Journal profile / back page corrected (typos, removed "first issue will be published soon"). Both full-issue PDFs rebuilt with these.
+- Manuscript template: sample citation corrected to "JMN J Med Sci. 2025 Jul–Dec;1(1):3–10." and superscript citation rule.
+- About page: removed stale "first issue will be published soon". Editorial board: neutral note, no "pending" placeholders, Advisor entry left unchanged at the user's request. Submission page: internal pricing note and DOI claim removed. Subject string capitalised consistently.
+- Pipeline now reads source PDFs only from `_junk_for_review/` originals, so re-runs never re-stamp already-stamped files.

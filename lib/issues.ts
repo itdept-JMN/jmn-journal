@@ -22,7 +22,6 @@ export interface IssueRecord {
   periodLong: string; // e.g. "January–June 2026"
   title: string; // e.g. "Volume 2, Issue 1, Jan–Jun 2026"
   fullIssuePdf: string;
-  coverPdf: string;
   articles: Array<{
     id: string;
     type: string;
